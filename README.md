@@ -4,7 +4,7 @@ Base eslint config for all projects
 
 ## Installation
 
-`npm install @anmiles/eslint-config`
+`npm install --save-dev @anmiles/eslint-config`
 
 ## Usage
 

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.2](../../tags/v1.0.2) - 2023-05-06
 ### Changed
+- Fix instruction to install as devDependency
+
+## [1.0.2](../../tags/v1.0.2) - 2023-05-06
+### Changed
 - Move project to `lib` namespace
 
 ## [1.0.1](../../tags/v1.0.1) - 2023-05-06
