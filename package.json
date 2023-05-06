@@ -4,8 +4,8 @@
   "description": "Base eslint config for all projects",
   "keywords": [],
   "author": "Anatoliy Oblaukhov",
-  "homepage": "https://gitlab.com/anmiles/eslint-config",
-  "repository": "gitlab:anmiles/eslint-config",
+  "homepage": "https://gitlab.com/anmiles/lib/eslint-config",
+  "repository": "gitlab:anmiles/lib/eslint-config",
   "license": "MIT",
   "engines": {
     "node": ">=18.14.2"
