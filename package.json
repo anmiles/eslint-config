@@ -2,7 +2,11 @@
   "name": "@anmiles/eslint-config",
   "version": "1.0.4",
   "description": "Base eslint config for all projects",
-  "keywords": [],
+  "keywords": [
+    "lint",
+    "eslint",
+    "configuration"
+  ],
   "author": "Anatoliy Oblaukhov",
   "homepage": "https://gitlab.com/anmiles/lib/eslint-config",
   "repository": "gitlab:anmiles/lib/eslint-config",
