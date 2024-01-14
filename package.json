@@ -16,7 +16,7 @@
   },
   "type": "module",
   "scripts": {
-    "lint": "eslint --ext .js,.cjs,.ts .",
+    "lint": "eslint --ext .js,.cjs,.ts --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix"
   },
   "devDependencies": {

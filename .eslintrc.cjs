@@ -19,11 +19,6 @@ module.exports = {
 		node : true,
 		jest : true,
 	},
-	ignorePatterns : [
-		'**/node_modules/',
-		'coverage/',
-		'dist/',
-	],
 	rules : {
 		'no-unused-vars'                      : [ 'off' ],
 		'@typescript-eslint/no-redeclare'     : [ 'error' ],
