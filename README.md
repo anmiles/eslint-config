@@ -8,12 +8,12 @@ Base eslint config for all projects
 
 ## Usage
 
-### Eslint will automatically ignore files that listed in `.gitignore` 
+### Eslint will automatically ignore files that listed in `.gitignore`
 
 `package.json:`
 ``` json
 	"scripts": {
-		"lint": "eslint --ext .js,.cjs,.ts --ignore-path .gitignore ."
+		"lint": "eslint --ext .js,.ts --ignore-path .gitignore ."
 	}
 ```
 
