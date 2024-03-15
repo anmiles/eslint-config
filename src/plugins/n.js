@@ -9,6 +9,7 @@ module.exports = {
 
 	rules : {
 		'n/no-extraneous-import' : [ 'off' ],
+		'n/no-missing-require'   : [ 'off' ],
 		'n/no-missing-import'    : [ 'off' ],
 		'n/no-path-concat'       : [ 'error' ],
 		'n/no-process-exit'      : [ 'off' ],
