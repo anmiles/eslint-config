@@ -15,7 +15,7 @@
 		"node": ">=18.18.0"
 	},
 	"scripts": {
-		"lint": "eslint --config ./src/base.preset.js .",
+		"lint": "eslint .",
 		"lint:fix": "npm run lint -- --fix"
 	},
 	"peerDependencies": {
