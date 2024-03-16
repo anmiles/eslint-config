@@ -72,13 +72,16 @@ module.exports = {
 	extends : [
 		'./node_modules/@anmiles/eslint-config/src/base.preset.js',
 	],
-	ignorePatterns : [
-		'someFile.js'
-		'/rootDir/anotherFile.js'
-		'**/someDir/',
-	],
 };
 ```
 
-`package-lock.json` doesn't have to be ignored, it's already ignored in configuration for `jsonp` plugin inside `base` preset.
-`node_modules` doesn't have to be ignored, it's implicitly ignored by ESLint.
+`.eslintignore`:
+```
+someFile.js
+/rootDir/anotherFile.js
+**/someDir/
+```
+
+#### Notes
+- `package-lock.json` doesn't have to be ignored. It's already ignored in configuration for `jsonp` plugin inside `base` preset.
+- `node_modules` doesn't have to be ignored. It's implicitly ignored by ESLint.

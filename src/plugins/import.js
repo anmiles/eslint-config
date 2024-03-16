@@ -10,6 +10,7 @@ module.exports = {
 
 	rules : {
 		'import/consistent-type-specifier-style' : [ 'error', 'prefer-top-level' ],
+		'import/exports-last'                    : [ 'error' ],
 		'import/extensions'                      : [ 'error', { js : 'never', json : 'always' } ],
 		'import/first'                           : [ 'error' ],
 		'import/group-exports'                   : [ 'error' ],
