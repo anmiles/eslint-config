@@ -65,6 +65,7 @@ module.exports = {
 		'@typescript-eslint/promise-function-async'         : [ 'error' ],
 		'@typescript-eslint/require-await'                  : [ 'error' ],
 		'@typescript-eslint/restrict-plus-operands'         : [ 'error' ],
+		'@typescript-eslint/restrict-template-expressions'  : [ 'error', { allowNumber : true } ],
 		'@typescript-eslint/sort-type-constituents'         : [ 'error' ],
 		'@typescript-eslint/switch-exhaustiveness-check'    : [ 'error' ],
 		'@typescript-eslint/unbound-method'                 : [ 'error', { ignoreStatic : true } ],
