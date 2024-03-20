@@ -41,6 +41,10 @@ module.exports = {
 			format   : null,
 		} ],
 		'@typescript-eslint/no-array-delete'      : [ 'error' ],
+		'@typescript-eslint/no-floating-promises' : [ 'error', {
+			ignoreVoid : true,
+			ignoreIIFE : true,
+		} ],
 		'@typescript-eslint/no-invalid-void-type' : [ 'error', {
 			allowInGenericTypeArguments : true,
 		} ],
