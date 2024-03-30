@@ -5,7 +5,6 @@ module.exports = {
 
 	rules : {
 		'@stylistic/jsx-closing-bracket-location' : [ 'error', 'line-aligned' ],
-		'@stylistic/jsx-closing-tag-location'     : [ 'error' ],
 		'@stylistic/jsx-curly-brace-presence'     : [ 'error', { props : 'never', children : 'never', propElementValues : 'always' } ],
 		'@stylistic/jsx-curly-newline'            : [ 'error' ],
 		'@stylistic/jsx-curly-spacing'            : [ 'error', {
