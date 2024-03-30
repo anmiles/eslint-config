@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.0.0](../../tags/v9.0.0) - 2024-03-30
+### Changed
+- Do not split double curly spaces with a space in jsx
+
+## [8.0.0](../../tags/v8.0.0) - 2024-03-30
+### Changed
+- Do not split double curly spaces with a space in jsx
+
 ## [7.1.2](../../tags/v7.1.2) - 2024-03-26
 ### Changed
 - Update dependencies
