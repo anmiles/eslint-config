@@ -48,10 +48,18 @@ module.exports = {
 		'react/prefer-read-only-props'               : [ 'error' ],
 		'react/prefer-stateless-function'            : [ 'error' ],
 		'react/prop-types'                           : [ 'off' ],
-		'react/sort-comp'                            : [ 'error' ],
-		'react/state-in-constructor'                 : [ 'error' ],
-		'react/static-property-placement'            : [ 'error', 'static public field' ],
-		'react/style-prop-object'                    : [ 'error' ],
-		'react/void-dom-elements-no-children'        : [ 'error' ],
+		'react/sort-comp'                            : [ 'error', {
+			order : [
+				'instance-variables',
+				'static-methods',
+				'lifecycle',
+				'everything-else',
+				'render',
+			],
+		} ],
+		'react/state-in-constructor'          : [ 'error' ],
+		'react/static-property-placement'     : [ 'error', 'static public field' ],
+		'react/style-prop-object'             : [ 'error' ],
+		'react/void-dom-elements-no-children' : [ 'error' ],
 	},
 };

@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.0.2](../../tags/v9.0.2) - 2024-04-14
+### Changed
+- `react/sort-comp` to put instance variables before everything
+
 ## [9.0.1](../../tags/v9.0.1) - 2024-03-30
 ### Removed
 - Remove jsx-closing-tag-location rule to allow closing tags to be on the same line as multiline opening tags
