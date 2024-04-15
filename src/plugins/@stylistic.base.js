@@ -8,7 +8,7 @@ module.exports = {
 		'@stylistic/arrow-parens'                : [ 'error' ],
 		'@stylistic/arrow-spacing'               : [ 'error' ],
 		'@stylistic/block-spacing'               : [ 'error' ],
-		'@stylistic/brace-style'                 : [ 'error' ],
+		'@stylistic/brace-style'                 : [ 'error', '1tbs', { allowSingleLine : true } ],
 		'@stylistic/comma-dangle'                : [ 'error', 'always-multiline' ],
 		'@stylistic/comma-spacing'               : [ 'error' ],
 		'@stylistic/comma-style'                 : [ 'error' ],

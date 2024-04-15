@@ -15,10 +15,6 @@ module.exports = {
 	},
 
 	rules : {
-		'@stylistic/brace-style' : [ 'error', '1tbs', { allowSingleLine : true } ],
-
-		'@typescript-eslint/no-confusing-void-expression' : [ 'error', '1tbs', { allowSingleLine : true, ignoreVoidOperator : true } ],
-
 		'react/boolean-prop-naming'                  : [ 'error', { validateNested : true } ],
 		'react/destructuring-assignment'             : [ 'error', 'always', { ignoreClassFields : true, destructureInSignature : 'always' } ],
 		'react/forbid-component-props'               : [ 'error' ],

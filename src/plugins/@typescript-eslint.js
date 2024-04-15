@@ -41,7 +41,7 @@ module.exports = {
 			format   : null,
 		} ],
 		'@typescript-eslint/no-array-delete'              : [ 'error' ],
-		'@typescript-eslint/no-confusing-void-expression' : [ 'error', '1tbs', { ignoreVoidOperator : true } ],
+		'@typescript-eslint/no-confusing-void-expression' : [ 'error', { ignoreArrowShorthand : true, ignoreVoidOperator : true } ],
 		'@typescript-eslint/no-floating-promises'         : [ 'error', {
 			ignoreVoid : true,
 			ignoreIIFE : true,
