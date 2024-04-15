@@ -40,8 +40,9 @@ module.exports = {
 			selector : 'objectLiteralProperty',
 			format   : null,
 		} ],
-		'@typescript-eslint/no-array-delete'      : [ 'error' ],
-		'@typescript-eslint/no-floating-promises' : [ 'error', {
+		'@typescript-eslint/no-array-delete'              : [ 'error' ],
+		'@typescript-eslint/no-confusing-void-expression' : [ 'error', '1tbs', { ignoreVoidOperator : true } ],
+		'@typescript-eslint/no-floating-promises'         : [ 'error', {
 			ignoreVoid : true,
 			ignoreIIFE : true,
 		} ],
