@@ -50,6 +50,7 @@ module.exports = {
 			allowInGenericTypeArguments : true,
 		} ],
 		'@typescript-eslint/no-loop-func'                   : [ 'error' ],
+		'@typescript-eslint/no-misused-promises'            : [ 'error', { checksVoidReturn : false } ],
 		'@typescript-eslint/no-namespace'                   : [ 'error', { allowDeclarations : true } ],
 		'@typescript-eslint/no-non-null-assertion'          : [ 'off' ],
 		'@typescript-eslint/no-unsafe-unary-minus'          : [ 'error' ],
