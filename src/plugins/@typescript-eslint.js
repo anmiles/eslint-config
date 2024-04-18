@@ -19,6 +19,7 @@ module.exports = {
 		'require-await'         : [ 'off' ],
 
 		'import/no-named-as-default' : [ 'off' ],
+		'import/no-unresolved'       : [ 'off' ],
 
 		'@typescript-eslint/array-type'              : [ 'off' ],
 		'@typescript-eslint/consistent-type-exports' : [ 'error' ],
