@@ -1,6 +1,6 @@
 {
 	"name": "@anmiles/eslint-config",
-	"version": "8.0.6",
+	"version": "8.0.7",
 	"description": "Base eslint config for all projects",
 	"keywords": [
 		"lint",
