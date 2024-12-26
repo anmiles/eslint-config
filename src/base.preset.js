@@ -36,7 +36,7 @@ module.exports = {
 				'*.json',
 			],
 			extends : [
-				'./plugins/jsonc.js',
+				'./plugins/json.js',
 			],
 		},
 	],
