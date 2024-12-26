@@ -19,15 +19,15 @@
 		"lint:fix": "npm run lint -- --fix"
 	},
 	"peerDependencies": {
-		"@stylistic/eslint-plugin": "^1.7.0",
-		"@typescript-eslint/eslint-plugin": "^7.4.0",
+		"@stylistic/eslint-plugin": "^1.8.1",
+		"@typescript-eslint/eslint-plugin": "^7.18.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-align-assignments": "^1.1.2",
 		"eslint-plugin-import": "^2.29.1",
 		"eslint-plugin-jest": "^27.9.0",
-		"eslint-plugin-jsonc": "^2.14.1",
+		"eslint-plugin-jsonc": "^2.18.2",
 		"eslint-plugin-n": "^16.6.2",
-		"eslint-plugin-promise": "^6.1.1",
+		"eslint-plugin-promise": "^6.6.0",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-redux": "^4.1.0",
 		"eslint-plugin-react-refresh": "^0.4.6"
