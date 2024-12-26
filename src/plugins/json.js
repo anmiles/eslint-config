@@ -1,3 +1,6 @@
+// TODO: add everything for markdown plugin
+
+// TODO: change everything for using of the new native plugin
 module.exports = {
 	plugins : [
 		'jsonc',
