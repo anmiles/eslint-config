@@ -141,9 +141,10 @@ npm install --save-peer eslint-plugin-promise@latest
 npm install --save-peer eslint-plugin-react-hooks@latest
 npm install --save-peer eslint-plugin-react-redux@latest
 npm install --save-peer eslint-plugin-react-refresh@latest
-npm install --save-peer @eslint/json@latest
-npm install --save-peer @eslint/markdown@latest
 npm install --save-peer @stylistic/eslint-plugin@latest
 npm install --save-peer @typescript-eslint/eslint-plugin@latest
 npm install --save-peer eslint@latest
+npm install --save-peer @eslint/js@latest
+npm install --save-peer @eslint/json@latest
+npm install --save-peer @eslint/markdown@latest
 npm uninstall eslint-plugin-jsonc
