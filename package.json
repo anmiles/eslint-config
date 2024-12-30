@@ -11,12 +11,17 @@
 	"homepage": "https://github.com/anmiles/eslint-config",
 	"repository": "github:anmiles/eslint-config",
 	"license": "MIT",
+	"main": "./eslint.config.test.mjs",
 	"engines": {
 		"node": ">=18.18.0"
 	},
 	"scripts": {
 		"lint": "eslint .",
 		"lint:fix": "npm run lint -- --fix"
+	},
+	"devDependencies": {
+		"@anmiles/tsconfig": "^3.0.2",
+		"typescript": "^5.7.2"
 	},
 	"peerDependencies": {
 		"@eslint/js": "^9.17.0",

@@ -24,6 +24,9 @@ AFTER: `languageOptions: { globals: { custom: 'value' }}`
 BEFORE: `parserOptions: { ecmaVersion: 2022, sourceType: "module" }`
 AFTER: `languageOptions: { ecmaVersion: 2022, sourceType: "module" }`
 
+BEFORE: `module.exports = { overrides: [...] }`
+AFTER: `export default [...]`
+
 BEFORE: `/* eslint-env mocha */`
 AFTER: `/* global describe, it -- Globals defined by Mocha */` or `languageOptions: { globals: { ...globals.mocha }}`
 
@@ -45,5 +48,22 @@ AFTER: `files: ["**/*.ts", "**/*.tsx"]`
 BEFORE: `--no-eslintrc`
 AFTER: `--no-config-lookup`
 
+BEFORE: `eslint .`
+AFTER: `eslint`
+
 BEFORE: `eslintConfig` in package.json
 AFTER: move to flat config
+
+RULES:
+
+Four new rules have been enabled in eslint:recommended:
+no-constant-binary-expression
+no-empty-static-block
+no-new-native-nonconstructor
+no-unused-private-class-members
+
+Additionally, the following rules have been removed from eslint:recommended:
+no-extra-semi
+no-inner-declarations
+no-mixed-spaces-and-tabs
+no-new-symbol

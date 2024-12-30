@@ -15,7 +15,7 @@ module.exports = {
 		'no-implied-eval'         : [ 'error' ],
 		'no-loop-func'            : [ 'error' ],
 		'no-useless-rename'       : [ 'error' ],
-		'no-unused-vars'          : [ 'error', { varsIgnorePattern : '^_' } ],
+		'no-unused-vars'          : [ 'error', { varsIgnorePattern : '^_', caughtErrorsIgnorePattern : '^_' } ],
 		'no-var'                  : [ 'error' ],
 		'object-shorthand'        : [ 'error' ],
 		'prefer-const'            : [ 'error' ],
