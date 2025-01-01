@@ -11,16 +11,18 @@
 	"homepage": "https://github.com/anmiles/eslint-config",
 	"repository": "github:anmiles/eslint-config",
 	"license": "MIT",
-	"main": "./eslint.config.test.mjs",
 	"engines": {
 		"node": ">=18.18.0"
 	},
+	"main": "dist/eslint.config.mjs",
 	"scripts": {
+		"build": "rimraf dist && tsc",
 		"lint": "eslint .",
 		"lint:fix": "npm run lint -- --fix"
 	},
 	"devDependencies": {
 		"@anmiles/tsconfig": "^3.0.2",
+		"rimraf": "^5.0.5",
 		"typescript": "^5.7.2"
 	},
 	"peerDependencies": {
