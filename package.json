@@ -17,7 +17,7 @@
 	"main": "dist/eslint.config.mjs",
 	"scripts": {
 		"build": "rimraf dist && tsc",
-		"lint": "eslint .",
+		"lint": "eslint",
 		"lint:fix": "npm run lint -- --fix"
 	},
 	"devDependencies": {
@@ -26,12 +26,15 @@
 		"typescript": "^5.7.2"
 	},
 	"peerDependencies": {
+		"@eslint/compat": "^1.2.4",
 		"@eslint/js": "^9.17.0",
 		"@eslint/json": "^0.9.0",
 		"@eslint/markdown": "^6.2.1",
 		"@stylistic/eslint-plugin": "^2.12.1",
-		"@typescript-eslint/eslint-plugin": "^8.18.2",
+		"@typescript-eslint/eslint-plugin": "^8.19.0",
+		"@typescript-eslint/parser": "^8.19.0",
 		"eslint": "^9.17.0",
+		"eslint-import-resolver-typescript": "^3.7.0",
 		"eslint-plugin-align-assignments": "^1.1.2",
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-jest": "^28.10.0",

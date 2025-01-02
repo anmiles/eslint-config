@@ -132,18 +132,26 @@ https://www.npmjs.com/package/@eslint/json
 Configuration Migration Guide - ESLint - Pluggable JavaScript Linter
 https://eslint.org/docs/latest/use/configure/migration-guide
 
+# TODO: fix instructions in README.md
+# TODO: add everything for markdown plugin
+# TODO: check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
 # TODO: include in migration guide
 # TODO: different lists for different presets
 # TODO: warning to use elder version if not intended to migrate to the flat config
 # TODO: replace ../lib/eslint-config with @anmiles/eslint-config
 # TODO: check "main" in package.json
+# TODO: "please use" that version to keep using old config scheme
 npm install --save-dev ../lib/eslint-config @eslint/js@9.17.0 @eslint/json@0.9.0 @eslint/markdown@6.2.1 @stylistic/eslint-plugin@2.12.1 @typescript-eslint/eslint-plugin@8.18.2 eslint@9.17.0 eslint-plugin-align-assignments@1.1.2 eslint-plugin-import@2.31.0 eslint-plugin-jest@28.10.0 eslint-plugin-n@17.15.1 eslint-plugin-promise@7.2.1
+npm uninstall eslint-plugin-jsonc
 npm install --save-dev @eslint/js@latest
 npm install --save-dev @eslint/json@latest
+npm install --save-dev @eslint/compat@latest
 npm install --save-dev @eslint/markdown@latest
 npm install --save-dev @stylistic/eslint-plugin@latest
 npm install --save-dev @typescript-eslint/eslint-plugin@latest
+npm install --save-dev @typescript-eslint/parser@latest
 npm install --save-dev eslint@latest
+npm install --save-dev eslint-import-resolver-typescript@latest
 npm install --save-dev eslint-plugin-align-assignments@latest
 npm install --save-dev eslint-plugin-import@latest
 npm install --save-dev eslint-plugin-jest@latest
@@ -152,4 +160,3 @@ npm install --save-dev eslint-plugin-promise@latest
 npm install --save-dev eslint-plugin-react-hooks@latest
 npm install --save-dev eslint-plugin-react-redux@latest
 npm install --save-dev eslint-plugin-react-refresh@latest
-npm uninstall eslint-plugin-jsonc
