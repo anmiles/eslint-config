@@ -1,4 +1,4 @@
-# TODO: apply migration changes
+# TODO: apply migration changes to end-project configs
 https://eslint.org/docs/latest/use/configure/migration-guide
 
 BEFORE: `eslintrc`
@@ -57,17 +57,3 @@ AFTER: `eslint`
 
 BEFORE: `eslintConfig` in package.json
 AFTER: move to flat config
-
-#TODO: RULES:
-
-Four new rules have been enabled in eslint:recommended:
-no-constant-binary-expression
-no-empty-static-block
-no-new-native-nonconstructor
-no-unused-private-class-members
-
-Additionally, the following rules have been removed from eslint:recommended:
-no-extra-semi
-no-inner-declarations
-no-mixed-spaces-and-tabs
-no-new-symbol

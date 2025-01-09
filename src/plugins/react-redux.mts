@@ -22,7 +22,6 @@ export default [
 		],
 
 		rules : {
-
 			...reactReduxPlugin.configs.recommended.rules as Linter.Config['rules'],
 		},
 	},

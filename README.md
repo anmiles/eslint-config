@@ -133,7 +133,6 @@ Configuration Migration Guide - ESLint - Pluggable JavaScript Linter
 https://eslint.org/docs/latest/use/configure/migration-guide
 
 # TODO: fix instructions in README.md
-# TODO: add everything for markdown plugin
 # TODO: check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
 # TODO: include in migration guide
 # TODO: different lists for different presets

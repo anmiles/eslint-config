@@ -5,6 +5,7 @@ import basePlugin from './plugins/base.mjs';
 import stylisticJsPlugin from './plugins/@stylistic.js.mjs';
 import alignAssignmentsPlugin from './plugins/align-assignments.mjs';
 import importPlugin from './plugins/import.mjs';
+import markdownPlugin from './plugins/markdown.mjs';
 import nPlugin from './plugins/n.mjs';
 import promisePlugin from './plugins/promise.mjs';
 import jsonPlugin from './plugins/json.mjs';
@@ -14,6 +15,7 @@ export default [
 	...stylisticJsPlugin,
 	...alignAssignmentsPlugin,
 	...importPlugin,
+	...markdownPlugin,
 	...nPlugin,
 	...promisePlugin,
 	...jsonPlugin,

@@ -22,7 +22,6 @@ export default [
 		],
 
 		rules : {
-
 			...reactHooksPlugin.configs.recommended.rules as Linter.Config['rules'],
 
 			'react-hooks/rules-of-hooks'  : [ 'error' ],

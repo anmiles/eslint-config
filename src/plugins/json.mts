@@ -6,8 +6,7 @@ export default [
 		plugins : {
 			'json' : jsonPlugin,
 		},
-	},
-	{
+
 		files : [
 			'**/*.json',
 		],
@@ -20,6 +19,7 @@ export default [
 
 		rules : {
 			...jsonPlugin.configs.recommended.rules,
+
 			'no-irregular-whitespace' : 'off',
 		},
 	},

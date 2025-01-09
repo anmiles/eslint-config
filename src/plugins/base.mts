@@ -2,8 +2,6 @@ import type { Linter } from 'eslint';
 import eslintPlugin from '@eslint/js';
 
 export default [
-	eslintPlugin.configs.recommended,
-
 	{
 		files : [
 			'**/*.js',
@@ -17,6 +15,8 @@ export default [
 		],
 
 		rules : {
+			...eslintPlugin.configs.recommended.rules,
+
 			'arrow-body-style'        : [ 'error' ],
 			'camelcase'               : [ 'error' ],
 			'complexity'              : [ 'error' ],
