@@ -1,9 +1,8 @@
-import baseConfig from './dist/base.preset.mjs';
-import tsConfig from './dist/ts.preset.mjs';
+import { basePreset, tsPreset } from './dist/index.mjs';
 
 export default [
-	...baseConfig,
-	...tsConfig,
+	...basePreset,
+	...tsPreset,
 	{
 		ignores : [
 			'dist/*',

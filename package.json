@@ -14,7 +14,7 @@
 	"engines": {
 		"node": ">=18.18.0"
 	},
-	"main": "dist/eslint.config.mjs",
+	"main": "dist/index.mjs",
 	"scripts": {
 		"build": "rimraf dist && tsc",
 		"lint": "eslint",
