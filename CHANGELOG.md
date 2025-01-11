@@ -7,13 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [9.0.0](../../tags/v9.0.0) - 2024-12-26
 ### Added
-- `@eslint/markdown`
+- `@eslint/json` plugin
+- `@eslint/markdown` plugin
 ### Changed
 - Migrate to ESLint V9 flat configs
 - Update all dependencies to the very latest version
-- Migrate from `eslint-plugin-json` to `@eslint/json`
+- Migrate from `eslint-plugin-json` plugin to `@eslint/json` plugin
 
-# TODO: "see migration guide" link
+#### TODO: "see migration guide" link
 
 ## [8.1.0](../../tags/v8.1.0) - 2024-12-26
 ### Changed

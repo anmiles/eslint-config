@@ -64,6 +64,7 @@ export default [
 			'@typescript-eslint/no-namespace'                                 : [ 'error', { allowDeclarations : true } ],
 			'@typescript-eslint/no-non-null-assertion'                        : [ 'off' ],
 			'@typescript-eslint/no-unnecessary-parameter-property-assignment' : [ 'error' ],
+			'@typescript-eslint/no-unsafe-type-assertion'                     : [ 'error' ],
 			'@typescript-eslint/no-unsafe-unary-minus'                        : [ 'error' ],
 			'@typescript-eslint/no-unused-vars'                               : [ 'error', { varsIgnorePattern : '^_', caughtErrorsIgnorePattern : '^_' } ],
 			'@typescript-eslint/no-useless-empty-export'                      : [ 'error' ],

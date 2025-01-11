@@ -26,7 +26,7 @@ export default [
 
 			'import/consistent-type-specifier-style' : [ 'error', 'prefer-top-level' ],
 			'import/exports-last'                    : [ 'error' ],
-			'import/extensions'                      : [ 'error', { js : 'never', json : 'always', mjs : 'always' } ],
+			'import/extensions'                      : [ 'error', { js : 'never', json : 'always', mjs : 'always', checkTypeImports : true } ],
 			'import/first'                           : [ 'error' ],
 			'import/group-exports'                   : [ 'error' ],
 			'import/newline-after-import'            : [ 'error', { count : 1, considerComments : false } ],
@@ -36,7 +36,20 @@ export default [
 			'import/no-mutable-exports'              : [ 'error' ],
 			'import/no-named-as-default-member'      : [ 'off' ],
 			'import/no-useless-path-segments'        : [ 'error' ],
-			'import/order'                           : [ 'error', { groups : [ 'builtin', 'external', 'unknown', 'internal', 'parent', 'sibling', 'index' ] } ],
+			'import/order'                           : [ 'error', {
+				groups : [ 'builtin', 'external', 'unknown', 'internal', 'parent', 'sibling', 'index', 'object', 'type' ],
+				named  : {
+					enabled : true,
+					types   : 'types-last',
+				},
+				alphabetize : {
+					order                   : 'asc',
+					orderImportKind         : 'asc',
+					caseInsensitive         : true,
+					warnOnUnassignedImports : true,
+				},
+				'newlines-between' : 'always',
+			} ],
 		},
 
 		settings : {

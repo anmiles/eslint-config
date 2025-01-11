@@ -107,12 +107,24 @@ __Note that `base` preset is mandatory in all cases.__
 
 `eslint.config.mjs` (with using ts and jest presets):
 ```js
+import stylisticEslintPlugin from '@stylistic/eslint-plugin';
 import { basePreset, tsPreset, jestPreset } from './dist/index.mjs';
 
 export default [
 	...basePreset,
 	...tsPreset,
 	...jestPreset,
+	{
+		plugins : {
+			'@stylistic' : stylisticEslintPlugin,
+		},
+		rules : {
+			'@stylistic/object-curly-newline'    : [ 'error', 'always' ],
+			'@stylistic/object-property-newline' : [ 'error', {
+				allowAllPropertiesOnSameLine : false,
+			} ],
+		},
+	},
 	{
 		ignores : [
 			'dist/*',
@@ -123,59 +135,54 @@ export default [
 ];
 ```
 
-#### Notes
+## Notes
 - `package-lock.json` doesn't have to be ignored. It's already ignored in configuration for `json` plugin inside `base` preset.
 - `node_modules` doesn't have to be ignored. It's implicitly ignored by ESLint.
 - Don't keep `.eslintignore` file when using Flat Config. Use `ignores` config key instead (see the example above).
 
-# TODO: update all rules in plugins following their release updates:
-Releases · eslint/eslint
-https://github.com/eslint/eslint/releases?page=3
+## Links
 
-Releases · eslint-stylistic/eslint-stylistic
-https://github.com/eslint-stylistic/eslint-stylistic/releases?page=3
+### Release notes of ESLint plugins
 
-Releases · typescript-eslint/typescript-eslint
-https://github.com/typescript-eslint/typescript-eslint/releases?page=3
+- [Releases · @eslint/js](https://github.com/eslint/eslint/releases)
 
-Releases · import-js/eslint-plugin-import
-https://github.com/import-js/eslint-plugin-import/releases
+- [Releases · @eslint/json](https://github.com/eslint/json/releases)
 
-Releases · jest-community/eslint-plugin-jest
-https://github.com/jest-community/eslint-plugin-jest/releases?page=3
+- [Releases · @eslint/markdown](https://github.com/eslint/markdown/releases)
 
-Releases · ota-meshi/eslint-plugin-jsonc
-https://github.com/ota-meshi/eslint-plugin-jsonc/releases
+- [Releases · @stylistic/eslint-plugin](https://github.com/eslint-stylistic/eslint-stylistic/releases)
 
-Releases · eslint-community/eslint-plugin-n
-https://github.com/eslint-community/eslint-plugin-n/releases?page=4
+- [Releases · @typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/releases)
 
-Releases · eslint-community/eslint-plugin-promise
-https://github.com/eslint-community/eslint-plugin-promise/releases?page=1
+- [Releases · eslint-plugin-align-assignments](https://github.com/lucasefe/eslint-plugin-align-assignments/releases)
 
-react/packages/eslint-plugin-react-hooks/CHANGELOG.md at main · facebook/react
-https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/CHANGELOG.md
+- [Releases · eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/releases)
 
-Releases · DianaSuvorova/eslint-plugin-react-redux
-https://github.com/DianaSuvorova/eslint-plugin-react-redux/releases
+- [Releases · eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest/releases)
 
-Releases · ArnaudBarre/eslint-plugin-react-refresh
-https://github.com/ArnaudBarre/eslint-plugin-react-refresh/releases?page=1
+- [Releases · eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n/releases)
 
-no-useless-assignment - ESLint - Pluggable JavaScript Linter
-https://eslint.org/docs/latest/rules/no-useless-assignment#rule-details
+- [Releases · eslint-plugin-promise](https://github.com/eslint-community/eslint-plugin-promise/releases)
 
-@eslint/json - npm
-https://www.npmjs.com/package/@eslint/json
+- [Releases · eslint-plugin-react-hooks](https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/CHANGELOG.md)
 
+- [Releases · eslint-plugin-react-redux](https://github.com/DianaSuvorova/eslint-plugin-react-redux/releases)
+
+- [Releases · eslint-plugin-react-refresh](https://github.com/ArnaudBarre/eslint-plugin-react-refresh/releases)
+
+#### TODO: mention all added/changed/removed rules in CHANGELOG.md
+
+## Official migration guide
 Configuration Migration Guide - ESLint - Pluggable JavaScript Linter
 https://eslint.org/docs/latest/use/configure/migration-guide
 
-# TODO: check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
+#### TODO: include link to the file that contains everything from TODO.md as an example of migration
 
-# TODO: include in migration guide
-# TODO: different lists for different presets
-# TODO: replace ../lib/eslint-config with @anmiles/eslint-config
+#### TODO: check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
+
+#### TODO: include in migration guide
+#### TODO: different lists for different presets
+#### TODO: replace ../lib/eslint-config with @anmiles/eslint-config
 npm install --save-dev ../lib/eslint-config @eslint/js@9.17.0 @eslint/json@0.9.0 @eslint/markdown@6.2.1 @stylistic/eslint-plugin@2.12.1 @typescript-eslint/eslint-plugin@8.18.2 eslint@9.17.0 eslint-plugin-align-assignments@1.1.2 eslint-plugin-import@2.31.0 eslint-plugin-jest@28.10.0 eslint-plugin-n@17.15.1 eslint-plugin-promise@7.2.1
 npm uninstall eslint-plugin-jsonc
 	npm install --save-dev @eslint/compat@latest

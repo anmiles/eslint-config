@@ -1,5 +1,7 @@
-# TODO: apply migration changes to end-project configs
+#### TODO: this link is already mentioned in README.md
 https://eslint.org/docs/latest/use/configure/migration-guide
+
+#### TODO: apply migration changes to end-project configs
 
 BEFORE: `eslintrc`
 AFTER: `eslint.config.mts`

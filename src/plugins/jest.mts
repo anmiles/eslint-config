@@ -21,10 +21,10 @@ export default [
 		rules : {
 			...jestPlugin.configs['flat/recommended'].rules,
 
-			'n/no-unpublished-import'           : [ 'off' ],
-			'@typescript-eslint/unbound-method' : [ 'off' ], // access method to check whether it have been called
+			'n/no-unpublished-import' : [ 'off' ],
 
 			'jest/no-standalone-expect' : [ 'error' ],
+			'jest/prefer-jest-mocked'   : [ 'error' ],
 			'jest/valid-title'          : [ 'error', { ignoreTypeOfDescribeName : true } ],
 		},
 	},

@@ -31,6 +31,8 @@ export default [
 			'promise/no-return-in-finally'      : [ 'error' ],
 			'promise/prefer-await-to-callbacks' : [ 'error' ],
 			'promise/prefer-await-to-then'      : [ 'error' ],
+			'promise/prefer-catch'              : [ 'error' ],
+			'promise/spec-only'                 : [ 'error' ],
 			'promise/valid-params'              : [ 'error' ],
 		},
 	},
