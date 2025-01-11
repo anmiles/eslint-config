@@ -21,7 +21,8 @@ export default [
 		rules : {
 			...jestPlugin.configs['flat/recommended'].rules,
 
-			'n/no-unpublished-import' : [ 'off' ],
+			'i18next/no-literal-string' : [ 'off' ],
+			'n/no-unpublished-import'   : [ 'off' ],
 
 			'jest/no-standalone-expect' : [ 'error' ],
 			'jest/prefer-jest-mocked'   : [ 'error' ],

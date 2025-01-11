@@ -26,7 +26,7 @@ __Note that `base` preset is mandatory in all cases.__
 	- `npm install --save-dev @anmiles/eslint-config`
 1. Install required devDependencies
 	- Base dependencies for all files:
-		- `npm install --save-dev eslint eslint-plugin-align-assignments eslint-plugin-import eslint-plugin-n eslint-plugin-promise @eslint/compat @eslint/js @eslint/json @eslint/markdown @stylistic/eslint-plugin`
+		- `npm install --save-dev eslint eslint-plugin-align-assignments eslint-plugin-i18next eslint-plugin-import eslint-plugin-n eslint-plugin-promise @eslint/compat @eslint/js @eslint/json @eslint/markdown @stylistic/eslint-plugin`
 	- Additional dependencies for TS:
 		- `npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript`
 	- Additional dependencies for React:
@@ -156,6 +156,8 @@ export default [
 
 - [Releases · eslint-plugin-align-assignments](https://github.com/lucasefe/eslint-plugin-align-assignments/releases)
 
+- [Releases · eslint-plugin-i18next](https://github.com/edvardchen/eslint-plugin-i18next/blob/main/CHANGELOG.md)
+
 - [Releases · eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/releases)
 
 - [Releases · eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest/releases)
@@ -186,7 +188,7 @@ https://eslint.org/docs/latest/rules/no-useless-assignment#rule-details
 #### TODO: include in migration guide
 #### TODO: different lists for different presets
 #### TODO: replace ../lib/eslint-config with @anmiles/eslint-config
-npm install --save-dev ../lib/eslint-config @eslint/js@9.17.0 @eslint/json@0.9.0 @eslint/markdown@6.2.1 @stylistic/eslint-plugin@2.12.1 @typescript-eslint/eslint-plugin@8.18.2 eslint@9.17.0 eslint-plugin-align-assignments@1.1.2 eslint-plugin-import@2.31.0 eslint-plugin-jest@28.10.0 eslint-plugin-n@17.15.1 eslint-plugin-promise@7.2.1
+npm install --save-dev ../lib/eslint-config @eslint/js@9.17.0 @eslint/json@0.9.0 @eslint/markdown@6.2.1 @stylistic/eslint-plugin@2.12.1 @typescript-eslint/eslint-plugin@8.18.2 eslint@9.17.0 eslint-plugin-align-assignments@1.1.2 eslint-plugin-i18next@6.1.1 eslint-plugin-import@2.31.0 eslint-plugin-jest@28.10.0 eslint-plugin-n@17.15.1 eslint-plugin-promise@7.2.1
 npm uninstall eslint-plugin-jsonc
 	npm install --save-dev @eslint/compat@latest
 	npm install --save-dev @eslint/js@latest
@@ -198,6 +200,7 @@ npm uninstall eslint-plugin-jsonc
 	npm install --save-dev eslint@latest
 	npm install --save-dev eslint-import-resolver-typescript@latest
 	npm install --save-dev eslint-plugin-align-assignments@latest
+	npm install --save-dev eslint-plugin-i18next@latest
 	npm install --save-dev eslint-plugin-import@latest
 	npm install --save-dev eslint-plugin-jest@latest
 	npm install --save-dev eslint-plugin-n@latest

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - `@eslint/json` plugin
 - `@eslint/markdown` plugin
+- `eslint-plugin-i18next` plugin
 ### Changed
 - Migrate to ESLint V9 flat configs
 - Update all dependencies to the very latest version
