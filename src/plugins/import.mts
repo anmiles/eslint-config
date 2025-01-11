@@ -38,6 +38,19 @@ export default [
 			'import/no-useless-path-segments'        : [ 'error' ],
 			'import/order'                           : [ 'error', { groups : [ 'builtin', 'external', 'unknown', 'internal', 'parent', 'sibling', 'index' ] } ],
 		},
+
+		settings : {
+			'import/resolver' : {
+				node : {
+					extensions : [
+						'.js',
+						'.ts',
+						'.jsx',
+						'.tsx',
+					],
+				},
+			},
+		},
 	},
 
 	{
@@ -50,11 +63,13 @@ export default [
 
 		settings : {
 			'import/parsers' : {
-				'@typescript-eslint/parser' : [ '.ts', '.tsx' ],
+				'@typescript-eslint/parser' : [
+					'.ts',
+					'.tsx',
+				],
 			},
 			'import/resolver' : {
 				typescript : true,
-				node       : true,
 			},
 		},
 	},

@@ -33,9 +33,8 @@ __Note that `base` preset is mandatory in all cases.__
 		- `npm install --save-dev eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh`
 	- Additional dependencies for Jest:
 		- `npm install --save-dev eslint-plugin-jest`
-1. Extend all needed presets in your `./eslint.config.mjs`
-	- For JS-only projects (without TS, React, Jest) use base preset
-		`./eslint.config.mjs`:
+1. Extend all needed presets in your `./eslint.config.mjs` (or `./eslint.config.js` for ESM projects)
+	- For JS-only projects (without TS, React, Jest) use base preset:
 		```js
 		import { basePreset } from '@anmiles/eslint-config';
 
@@ -46,8 +45,7 @@ __Note that `base` preset is mandatory in all cases.__
 		];
 		```
 	- For more complex projects use combination of presets
-		- Backend TS project with Jest
-			`./eslint.config.mjs`:
+		- Backend TS project with Jest:
 			```js
 			import { basePreset, tsPreset, jestPreset } from '@anmiles/eslint-config';
 
@@ -59,8 +57,7 @@ __Note that `base` preset is mandatory in all cases.__
 				/* your own config */
 			];
 			```
-		- Frontend TS project with React and Jest
-		`./eslint.config.mjs`:
+		- Frontend TS project with React and Jest:
 			```js
 			import { basePreset, tsPreset, jestPreset, reactPreset } from '@anmiles/eslint-config';
 
@@ -73,8 +70,7 @@ __Note that `base` preset is mandatory in all cases.__
 				/* your own config */
 			];
 			```
-	- Also you can use type-checked config
-		`./eslint.config.mts`:
+	- Also you can use type-checked config - `./eslint.config.mts` (or `./eslint.config.ts` for ESM projects)
 		```ts
 		import type { Linter } from 'eslint';
 		import { basePreset, tsPreset, jestPreset, reactPreset } from '@anmiles/eslint-config';
@@ -132,8 +128,6 @@ export default [
 - `node_modules` doesn't have to be ignored. It's implicitly ignored by ESLint.
 - Don't keep `.eslintignore` file when using Flat Config. Use `ignores` config key instead (see the example above).
 
-# TODO: update project to use ESM and check whether how this can be used in CommonJS projects
-
 # TODO: update all rules in plugins following their release updates:
 Releases · eslint/eslint
 https://github.com/eslint/eslint/releases?page=3
@@ -182,7 +176,6 @@ https://eslint.org/docs/latest/use/configure/migration-guide
 # TODO: include in migration guide
 # TODO: different lists for different presets
 # TODO: replace ../lib/eslint-config with @anmiles/eslint-config
-# TODO: --save-dev or --save-peer for end-project configs?
 npm install --save-dev ../lib/eslint-config @eslint/js@9.17.0 @eslint/json@0.9.0 @eslint/markdown@6.2.1 @stylistic/eslint-plugin@2.12.1 @typescript-eslint/eslint-plugin@8.18.2 eslint@9.17.0 eslint-plugin-align-assignments@1.1.2 eslint-plugin-import@2.31.0 eslint-plugin-jest@28.10.0 eslint-plugin-n@17.15.1 eslint-plugin-promise@7.2.1
 npm uninstall eslint-plugin-jsonc
 	npm install --save-dev @eslint/compat@latest
