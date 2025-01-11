@@ -26,7 +26,7 @@ export default [
 
 			'import/consistent-type-specifier-style' : [ 'error', 'prefer-top-level' ],
 			'import/exports-last'                    : [ 'error' ],
-			'import/extensions'                      : [ 'error', { js : 'never', json : 'always', mjs : 'always', checkTypeImports : true } ],
+			'import/extensions'                      : [ 'error', 'ignorePackages', { js : 'never', checkTypeImports : true } ],
 			'import/first'                           : [ 'error' ],
 			'import/group-exports'                   : [ 'error' ],
 			'import/newline-after-import'            : [ 'error', { count : 1, considerComments : false } ],
@@ -53,6 +53,12 @@ export default [
 		},
 
 		settings : {
+			'import/extensions' : [
+				'.js',
+				'.jsx',
+				'.ts',
+				'.tsx',
+			],
 			'import/resolver' : {
 				node : {
 					extensions : [

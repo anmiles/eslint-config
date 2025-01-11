@@ -9,6 +9,7 @@ export default [
 			'@stylistic' : stylisticEslintPlugin,
 		},
 		rules : {
+			'import/extensions' : [ 'error', 'ignorePackages', { checkTypeImports : true } ],
 			// TODO:
 			// '@stylistic/object-curly-newline'    : [ 'error', 'always' ],
 			// '@stylistic/object-property-newline' : [ 'error', {

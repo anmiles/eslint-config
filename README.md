@@ -178,6 +178,9 @@ https://eslint.org/docs/latest/use/configure/migration-guide
 
 #### TODO: include link to the file that contains everything from TODO.md as an example of migration
 
+#### TODO: no-useless-assignment - ESLint - Pluggable JavaScript Linter
+https://eslint.org/docs/latest/rules/no-useless-assignment#rule-details
+
 #### TODO: check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
 
 #### TODO: include in migration guide
