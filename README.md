@@ -172,22 +172,18 @@ export default [
 
 - [Releases · eslint-plugin-react-refresh](https://github.com/ArnaudBarre/eslint-plugin-react-refresh/releases)
 
-#### TODO: mention all added/changed/removed rules in CHANGELOG.md
+#### TODO: #test check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
+
+#### TODO: #docs mention all added/changed/removed rules in CHANGELOG.md
 
 ## Official migration guide
 Configuration Migration Guide - ESLint - Pluggable JavaScript Linter
 https://eslint.org/docs/latest/use/configure/migration-guide
+#### TODO: #docs include link to the file that contains everything from TODO.md as an example of migration
 
-#### TODO: include link to the file that contains everything from TODO.md as an example of migration
-
-#### TODO: no-useless-assignment - ESLint - Pluggable JavaScript Linter
-https://eslint.org/docs/latest/rules/no-useless-assignment#rule-details
-
-#### TODO: check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
-
-#### TODO: include in migration guide
-#### TODO: different lists for different presets
-#### TODO: replace ../lib/eslint-config with @anmiles/eslint-config
+#### TODO: #docs include in migration guide
+#### TODO: #docs different lists for different presets
+#### TODO: #docs replace ../lib/eslint-config with @anmiles/eslint-config
 npm install --save-dev ../lib/eslint-config @eslint/js@9.17.0 @eslint/json@0.9.0 @eslint/markdown@6.2.1 @stylistic/eslint-plugin@2.12.1 @typescript-eslint/eslint-plugin@8.18.2 eslint@9.17.0 eslint-plugin-align-assignments@1.1.2 eslint-plugin-i18next@6.1.1 eslint-plugin-import@2.31.0 eslint-plugin-jest@28.10.0 eslint-plugin-n@17.15.1 eslint-plugin-promise@7.2.1
 npm uninstall eslint-plugin-jsonc
 	npm install --save-dev @eslint/compat@latest
