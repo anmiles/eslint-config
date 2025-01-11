@@ -34,7 +34,8 @@ __Note that `base` preset is mandatory in all cases.__
 	- Additional dependencies for Jest:
 		- `npm install --save-dev eslint-plugin-jest`
 1. Extend all needed presets in your `./eslint.config.mjs`
-	- For JS-only projects (without TS, React, Jest) use base preset:
+	- For JS-only projects (without TS, React, Jest) use base preset
+		`./eslint.config.mjs`:
 		```js
 		import { basePreset } from '@anmiles/eslint-config';
 
@@ -45,7 +46,8 @@ __Note that `base` preset is mandatory in all cases.__
 		];
 		```
 	- For more complex projects use combination of presets
-		- Backend TS project with Jest:
+		- Backend TS project with Jest
+			`./eslint.config.mjs`:
 			```js
 			import { basePreset, tsPreset, jestPreset } from '@anmiles/eslint-config';
 
@@ -57,7 +59,8 @@ __Note that `base` preset is mandatory in all cases.__
 				/* your own config */
 			];
 			```
-		- Frontend TS project with React and Jest:
+		- Frontend TS project with React and Jest
+		`./eslint.config.mjs`:
 			```js
 			import { basePreset, tsPreset, jestPreset, reactPreset } from '@anmiles/eslint-config';
 
@@ -70,10 +73,26 @@ __Note that `base` preset is mandatory in all cases.__
 				/* your own config */
 			];
 			```
-1. Specify npm command
+	- Also you can use type-checked config
+		`./eslint.config.mts`:
+		```ts
+		import type { Linter } from 'eslint';
+		import { basePreset, tsPreset, jestPreset, reactPreset } from '@anmiles/eslint-config';
+
+		export default [
+			...basePreset,
+			...tsPreset,
+			...jestPreset,
+			...reactPreset,
+
+			/* your own config */
+
+		] satisfies Linter.Config[];
+	```
+1. Specify npm commands
 
 	```json
-	"lint": "eslint"
+	"lint": "eslint",
 	"lint:fix": "eslint --fix"
 	```
 
@@ -102,6 +121,7 @@ export default [
 		ignores : [
 			'dist/*',
 			'coverage/*',
+			'**/__snapshots__/*',
 		],
 	},
 ];
