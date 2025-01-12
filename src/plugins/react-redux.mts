@@ -3,22 +3,15 @@ import type { ESLint, Linter } from 'eslint';
 // @ts-expect-error 7016 plugin is non-typed
 import reactReduxPlugin from 'eslint-plugin-react-redux';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'react-redux' : fixupPluginRules(reactReduxPlugin as ESLint.Plugin),
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			...reactReduxPlugin.configs.recommended.rules as Linter.Config['rules'],

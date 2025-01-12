@@ -1,18 +1,11 @@
 import eslintPlugin from '@eslint/js';
 import type { Linter } from 'eslint';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			...eslintPlugin.configs.recommended.rules,

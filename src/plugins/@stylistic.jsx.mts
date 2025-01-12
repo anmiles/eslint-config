@@ -1,22 +1,15 @@
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
 import type { ESLint, Linter } from 'eslint';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'@stylistic' : stylisticEslintPlugin as ESLint.Plugin,
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			'@stylistic/jsx-closing-bracket-location' : [ 'error', 'line-aligned' ],

@@ -1,22 +1,14 @@
 import type { Linter } from 'eslint';
 import globals from 'globals';
 
+import { patterns } from '../lib/constants.mjs';
 import jestPlugin from '../plugins/jest.mjs';
 
 export default [
 	...jestPlugin,
 
 	{
-		files : [
-			'**/*.test.js',
-			'**/*.test.mjs',
-			'**/*.test.cjs',
-			'**/*.test.ts',
-			'**/*.test.cts',
-			'**/*.test.mts',
-			'**/*.test.jsx',
-			'**/*.test.tsx',
-		],
+		files : patterns.jest,
 
 		languageOptions : {
 			ecmaVersion : 2022,

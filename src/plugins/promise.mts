@@ -2,22 +2,15 @@ import type { ESLint, Linter } from 'eslint';
 // @ts-expect-error 7016 plugin is non-typed
 import promisePlugin from 'eslint-plugin-promise';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'promise' : promisePlugin as ESLint.Plugin,
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			...promisePlugin.configs['flat/recommended'].rules as Linter.Config['rules'],

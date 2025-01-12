@@ -1,20 +1,12 @@
 import { basePreset, tsPreset } from './dist/index.mjs';
+import { patterns } from './dist/lib/constants.mjs';
 
 export default [
 	...basePreset,
 	...tsPreset,
 	{
 		// TODO: #docs mention that possible problems mostly likely caused with lack of "files" option in override section
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			'@stylistic/max-len' : [ 'error', {
@@ -33,12 +25,7 @@ export default [
 	},
 	// TODO: #docs add this to an example of overriding rules
 	{
-		files : [
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.tsx',
-		],
+		files : patterns.ts,
 
 		rules : {
 			'@typescript-eslint/no-unsafe-type-assertion' : [ 'off' ],

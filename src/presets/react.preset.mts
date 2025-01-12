@@ -1,6 +1,7 @@
 import type { Linter } from 'eslint';
 import globals from 'globals';
 
+import { patterns } from '../lib/constants.mjs';
 import stylisticJsxPlugin from '../plugins/@stylistic.jsx.mjs';
 import i18NextPlugin from '../plugins/i18next.mjs';
 import reactHooksPlugin from '../plugins/react-hooks.mjs';
@@ -17,16 +18,7 @@ export default [
 	...reactRefreshPlugin,
 
 	{
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		languageOptions : {
 			ecmaVersion : 2022,

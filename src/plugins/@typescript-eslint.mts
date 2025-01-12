@@ -1,18 +1,15 @@
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 import type { ESLint, Linter } from 'eslint';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'@typescript-eslint' : typescriptEslintPlugin as unknown as ESLint.Plugin,
 		},
 
-		files : [
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.tsx',
-		],
+		files : patterns.ts,
 
 		rules : {
 			...typescriptEslintPlugin.configs['strictTypeChecked']?.rules,

@@ -1,22 +1,15 @@
 import type { Linter } from 'eslint';
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'react-refresh' : reactRefreshPlugin,
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			...reactRefreshPlugin.configs.recommended.rules,

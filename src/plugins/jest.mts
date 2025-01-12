@@ -1,22 +1,15 @@
 import type { Linter } from 'eslint';
 import jestPlugin from 'eslint-plugin-jest';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'jest' : jestPlugin,
 		},
 
-		files : [
-			'**/*.test.js',
-			'**/*.test.mjs',
-			'**/*.test.cjs',
-			'**/*.test.ts',
-			'**/*.test.cts',
-			'**/*.test.mts',
-			'**/*.test.jsx',
-			'**/*.test.tsx',
-		],
+		files : patterns.jest,
 
 		rules : {
 			...jestPlugin.configs['flat/recommended'].rules,

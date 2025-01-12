@@ -2,6 +2,7 @@ import typescriptEslintParser from '@typescript-eslint/parser';
 import type { Linter } from 'eslint';
 import globals from 'globals';
 
+import { patterns } from '../lib/constants.mjs';
 import stylisticTsPlugin from '../plugins/@stylistic.ts.mjs';
 import typescriptEslintPlugin from '../plugins/@typescript-eslint.mjs';
 
@@ -10,12 +11,7 @@ export default [
 	...typescriptEslintPlugin,
 
 	{
-		files : [
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.tsx',
-		],
+		files : patterns.ts,
 
 		languageOptions : {
 			ecmaVersion : 2022,

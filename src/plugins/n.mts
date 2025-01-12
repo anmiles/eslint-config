@@ -1,22 +1,15 @@
 import type { Linter } from 'eslint';
 import nodePlugin from 'eslint-plugin-n';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'n' : nodePlugin,
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			...nodePlugin.configs['flat/recommended'].rules,

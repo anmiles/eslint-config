@@ -1,18 +1,15 @@
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
 import type { ESLint, Linter } from 'eslint';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'@stylistic' : stylisticEslintPlugin as ESLint.Plugin,
 		},
 
-		files : [
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.tsx',
-		],
+		files : patterns.ts,
 
 		rules : {
 			'@stylistic/member-delimiter-style'  : [ 'error' ],

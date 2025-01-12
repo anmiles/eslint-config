@@ -2,22 +2,15 @@ import type { ESLint, Linter } from 'eslint';
 // @ts-expect-error 7016 plugin is non-typed
 import importPlugin from 'eslint-plugin-import';
 
+import { extensions, patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'import' : importPlugin as ESLint.Plugin,
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			...importPlugin.flatConfigs.recommended.rules as Linter.Config['rules'],
@@ -66,36 +59,13 @@ export default [
 		},
 
 		settings : {
-			'import/extensions' : [
-				'.js',
-				'.mjs',
-				'.cjs',
-				'.ts',
-				'.cts',
-				'.mts',
-				'.jsx',
-				'.tsx',
-			],
-			'import/parsers' : {
-				'@typescript-eslint/parser' : [
-					'.ts',
-					'.cts',
-					'.mts',
-					'.tsx',
-				],
+			'import/extensions' : extensions.js,
+			'import/parsers'    : {
+				'@typescript-eslint/parser' : extensions.ts,
 			},
 			'import/resolver' : {
 				node : {
-					extensions : [
-						'.js',
-						'.mjs',
-						'.cjs',
-						'.ts',
-						'.cts',
-						'.mts',
-						'.jsx',
-						'.tsx',
-					],
+					extensions : extensions.js,
 				},
 				typescript : true,
 			},

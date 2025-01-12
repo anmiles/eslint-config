@@ -1,22 +1,15 @@
 import type { Linter } from 'eslint';
 import i18NextPlugin from 'eslint-plugin-i18next';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'i18next' : i18NextPlugin,
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			...i18NextPlugin.configs['flat/recommended'].rules,

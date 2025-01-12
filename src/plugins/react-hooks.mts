@@ -3,22 +3,15 @@ import type { ESLint, Linter } from 'eslint';
 // @ts-expect-error 7016 plugin is non-typed
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
+import { patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'react-hooks' : fixupPluginRules(reactHooksPlugin as ESLint.Plugin),
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		rules : {
 			...reactHooksPlugin.configs.recommended.rules as Linter.Config['rules'],

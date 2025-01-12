@@ -1,6 +1,7 @@
 import type { Linter } from 'eslint';
 import globals from 'globals';
 
+import { patterns } from '../lib/constants.mjs';
 import stylisticJsPlugin from '../plugins/@stylistic.js.mjs';
 import alignAssignmentsPlugin from '../plugins/align-assignments.mjs';
 import basePlugin from '../plugins/base.mjs';
@@ -21,16 +22,7 @@ export default [
 	...jsonPlugin,
 
 	{
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		languageOptions : {
 			ecmaVersion : 2022,

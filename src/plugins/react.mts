@@ -1,22 +1,15 @@
 import type { Linter } from 'eslint';
 import reactPlugin from 'eslint-plugin-react';
 
+import { extensions, patterns } from '../lib/constants.mjs';
+
 export default [
 	{
 		plugins : {
 			'react' : reactPlugin,
 		},
 
-		files : [
-			'**/*.js',
-			'**/*.mjs',
-			'**/*.cjs',
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.jsx',
-			'**/*.tsx',
-		],
+		files : patterns.js,
 
 		settings : {
 			react : {
@@ -41,16 +34,7 @@ export default [
 			'react/hook-use-state'                : [ 'error' ],
 			'react/iframe-missing-sandbox'        : [ 'error' ],
 			'react/jsx-filename-extension'        : [ 'error', {
-				extensions : [
-					'.js',
-					'.mjs',
-					'.cjs',
-					'.ts',
-					'.cts',
-					'.mts',
-					'.jsx',
-					'.tsx',
-				],
+				extensions : extensions.js,
 			} ],
 			'react/jsx-fragments'                        : [ 'error', 'syntax' ],
 			'react/jsx-no-constructed-context-values'    : [ 'error' ],
