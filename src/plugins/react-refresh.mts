@@ -4,7 +4,7 @@ import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 export default [
 	{
 		plugins : {
-			'react-refresh' : reactRefreshPlugin.default,
+			'react-refresh' : reactRefreshPlugin,
 		},
 
 		files : [
@@ -19,7 +19,7 @@ export default [
 		],
 
 		rules : {
-			...reactRefreshPlugin.default.configs.recommended.rules,
+			...reactRefreshPlugin.configs.recommended.rules,
 
 			'react-refresh/only-export-components' : [ 'error', {
 				allowConstantExport : true,
