@@ -1,6 +1,7 @@
+import typescriptEslintParser from '@typescript-eslint/parser';
 import type { Linter } from 'eslint';
 import globals from 'globals';
-import typescriptEslintParser from '@typescript-eslint/parser';
+
 import stylisticTsPlugin from './plugins/@stylistic.ts.mjs';
 import typescriptEslintPlugin from './plugins/@typescript-eslint.mjs';
 

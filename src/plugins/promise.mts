@@ -1,5 +1,4 @@
-import type { Linter, ESLint } from 'eslint';
-
+import type { ESLint, Linter } from 'eslint';
 // @ts-expect-error 7016 plugin is non-typed
 import promisePlugin from 'eslint-plugin-promise';
 

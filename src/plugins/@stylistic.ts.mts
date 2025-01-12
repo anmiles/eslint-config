@@ -1,5 +1,5 @@
-import type { Linter, ESLint } from 'eslint';
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
+import type { ESLint, Linter } from 'eslint';
 
 export default [
 	{
@@ -15,8 +15,8 @@ export default [
 		],
 
 		rules : {
-			'@stylistic/ts/member-delimiter-style'  : [ 'error' ],
-			'@stylistic/ts/type-annotation-spacing' : [ 'error' ],
+			'@stylistic/member-delimiter-style'  : [ 'error' ],
+			'@stylistic/type-annotation-spacing' : [ 'error' ],
 		},
 	},
 ] satisfies Linter.Config[];

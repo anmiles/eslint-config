@@ -1,5 +1,5 @@
-import type { Linter } from 'eslint';
 import markdownPlugin from '@eslint/markdown';
+import type { Linter } from 'eslint';
 
 declare module '@eslint/core' {
 	export type SyntaxElement = unknown;

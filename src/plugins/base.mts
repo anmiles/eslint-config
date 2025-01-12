@@ -1,5 +1,5 @@
-import type { Linter } from 'eslint';
 import eslintPlugin from '@eslint/js';
+import type { Linter } from 'eslint';
 
 export default [
 	{

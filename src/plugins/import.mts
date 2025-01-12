@@ -1,5 +1,4 @@
-import type { Linter, ESLint } from 'eslint';
-
+import type { ESLint, Linter } from 'eslint';
 // @ts-expect-error 7016 plugin is non-typed
 import importPlugin from 'eslint-plugin-import';
 
@@ -26,29 +25,31 @@ export default [
 
 			'import/consistent-type-specifier-style' : [ 'error', 'prefer-top-level' ],
 			'import/exports-last'                    : [ 'error' ],
-			'import/extensions'                      : [ 'error', 'ignorePackages', { js : 'never', checkTypeImports : true } ],
-			'import/first'                           : [ 'error' ],
-			'import/group-exports'                   : [ 'error' ],
-			'import/newline-after-import'            : [ 'error', { count : 1, considerComments : false } ],
-			'import/no-absolute-path'                : [ 'error' ],
-			'import/no-cycle'                        : [ 'error' ],
-			'import/no-deprecated'                   : [ 'error' ],
-			'import/no-mutable-exports'              : [ 'error' ],
-			'import/no-named-as-default-member'      : [ 'off' ],
-			'import/no-useless-path-segments'        : [ 'error' ],
-			'import/order'                           : [ 'error', {
-				groups : [ 'builtin', 'external', 'unknown', 'internal', 'parent', 'sibling', 'index', 'object', 'type' ],
-				named  : {
-					enabled : true,
-					types   : 'types-last',
-				},
+
+			/*
+			 * TODO: #docs
+			 * 1. add examples of overriding this rule for ESM and CJS (check on end-projects)
+			 * 2. update eslint.config.mjs
+			 */
+			'import/extensions'                 : [ 'error', 'ignorePackages' ],
+			'import/first'                      : [ 'error' ],
+			'import/group-exports'              : [ 'error' ],
+			'import/newline-after-import'       : [ 'error', { count : 1, considerComments : false } ],
+			'import/no-absolute-path'           : [ 'error' ],
+			'import/no-cycle'                   : [ 'error' ],
+			'import/no-deprecated'              : [ 'error' ],
+			'import/no-mutable-exports'         : [ 'error' ],
+			'import/no-named-as-default-member' : [ 'off' ],
+			'import/no-useless-path-segments'   : [ 'error' ],
+			'import/order'                      : [ 'error', {
+				groups      : [ 'builtin', 'external', 'unknown', 'internal', 'parent', 'sibling', 'index', 'object' ],
+				named       : true,
 				alphabetize : {
-					order                   : 'asc',
-					orderImportKind         : 'asc',
-					caseInsensitive         : true,
-					warnOnUnassignedImports : true,
+					order           : 'asc',
+					caseInsensitive : true,
 				},
-				'newlines-between' : 'always',
+				'newlines-between'      : 'always',
+				warnOnUnassignedImports : true,
 			} ],
 		},
 
@@ -59,35 +60,39 @@ export default [
 				'.ts',
 				'.tsx',
 			],
-			'import/resolver' : {
-				node : {
-					extensions : [
-						'.js',
-						'.ts',
-						'.jsx',
-						'.tsx',
-					],
-				},
+			'import/extensionAlias' : {
+				'.js' : [
+					'.ts',
+					// `.tsx` can also be compiled as `.js`
+					'.tsx',
+					'.d.ts',
+					'.js',
+				],
+				'.jsx' : [ '.tsx', '.d.ts', '.jsx' ],
+				'.cjs' : [ '.cts', '.d.cts', '.cjs' ],
+				'.mjs' : [ '.mts', '.d.mts', '.mjs' ],
 			},
-		},
-	},
-
-	{
-		files : [
-			'**/*.ts',
-			'**/*.cts',
-			'**/*.mts',
-			'**/*.tsx',
-		],
-
-		settings : {
 			'import/parsers' : {
 				'@typescript-eslint/parser' : [
 					'.ts',
+					'.cts',
+					'.mts',
 					'.tsx',
 				],
 			},
 			'import/resolver' : {
+				node : {
+					extensions : [
+						'.js',
+						'.mjs',
+						'.cjs',
+						'.ts',
+						'.cts',
+						'.mts',
+						'.jsx',
+						'.tsx',
+					],
+				},
 				typescript : true,
 			},
 		},

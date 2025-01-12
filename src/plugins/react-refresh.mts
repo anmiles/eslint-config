@@ -1,5 +1,4 @@
 import type { Linter } from 'eslint';
-
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 
 export default [

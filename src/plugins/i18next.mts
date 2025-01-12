@@ -1,5 +1,4 @@
 import type { Linter } from 'eslint';
-
 import i18NextPlugin from 'eslint-plugin-i18next';
 
 export default [

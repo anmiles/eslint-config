@@ -1,5 +1,5 @@
-import type { Linter, ESLint } from 'eslint';
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
+import type { ESLint, Linter } from 'eslint';
 
 export default [
 	{
@@ -48,7 +48,6 @@ export default [
 				tabWidth               : 4,
 				ignoreComments         : true,
 				ignoreTrailingComments : true,
-				ignorePattern          : true,
 				ignoreRegExpLiterals   : true,
 				ignoreStrings          : true,
 				ignoreTemplateLiterals : true,

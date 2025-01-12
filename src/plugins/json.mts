@@ -1,5 +1,5 @@
-import type { Linter } from 'eslint';
 import jsonPlugin from '@eslint/json';
+import type { Linter } from 'eslint';
 
 export default [
 	{

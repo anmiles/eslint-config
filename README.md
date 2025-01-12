@@ -115,6 +115,7 @@ export default [
 	...tsPreset,
 	...jestPreset,
 	{
+		// TODO: do not import plugin; specify "files" instead
 		plugins : {
 			'@stylistic' : stylisticEslintPlugin,
 		},

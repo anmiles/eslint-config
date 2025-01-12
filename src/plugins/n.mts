@@ -21,8 +21,9 @@ export default [
 		rules : {
 			...nodePlugin.configs['flat/recommended'].rules,
 
-			'n/no-path-concat'  : [ 'error' ],
-			'n/no-process-exit' : [ 'off' ],
+			'n/no-extraneous-import' : [ 'error', { allowModules : [ 'globals' ] } ],
+			'n/no-path-concat'       : [ 'error' ],
+			'n/no-process-exit'      : [ 'off' ],
 		},
 	},
 ] satisfies Linter.Config[];
