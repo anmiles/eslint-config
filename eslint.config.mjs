@@ -1,9 +1,8 @@
-import { basePreset, tsPreset } from './dist/index.mjs';
-import { patterns } from './dist/lib/constants.mjs';
+import { patterns, presets } from './dist/index.mjs';
 
 export default [
-	...basePreset,
-	...tsPreset,
+	...presets.base,
+	...presets.ts,
 	{
 		// TODO: #docs mention that possible problems mostly likely caused with lack of "files" option in override section
 		files : patterns.js,

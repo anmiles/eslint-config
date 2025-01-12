@@ -1,4 +1,7 @@
-export { default as basePreset } from './presets/base.preset.mjs';
-export { default as jestPreset } from './presets/jest.preset.mjs';
-export { default as reactPreset } from './presets/react.preset.mjs';
-export { default as tsPreset } from './presets/ts.preset.mjs';
+import { default as base } from './presets/base.preset.mjs';
+import { default as jest } from './presets/jest.preset.mjs';
+import { default as react } from './presets/react.preset.mjs';
+import { default as ts } from './presets/ts.preset.mjs';
+
+export const presets = { base, jest, react, ts };
+export { extensions, patterns } from './lib/constants.mjs';

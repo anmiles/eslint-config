@@ -9,12 +9,12 @@ To keep using legacy config, please consider installing `@anmiles/eslint-config@
 
 ## Presets
 
-| Preset | Code                                                   |
-|--------|--------------------------------------------------------|
-| Base   | `import { basePreset } from '@anmiles/eslint-config'`  |
-| TS     | `import { tsPreset } from '@anmiles/eslint-config'`    |
-| React  | `import { reactPreset } from '@anmiles/eslint-config'` |
-| Jest   | `import { jestPreset } from '@anmiles/eslint-config'`  |
+| Preset | Code               |
+|--------|--------------------|
+| Base   | `...presets.base`  |
+| TS     | `...presets.ts`    |
+| React  | `...presets.react` |
+| Jest   | `...presets.jest`  |
 
 For JS-only projects (without TS, Jest, React) use base preset.
 For more complex projects use combination of presets.
@@ -36,10 +36,10 @@ __Note that `base` preset is mandatory in all cases.__
 1. Extend all needed presets in your `./eslint.config.mjs` (or `./eslint.config.js` for ESM projects)
 	- For JS-only projects (without TS, React, Jest) use base preset:
 		```js
-		import { basePreset } from '@anmiles/eslint-config';
+		import { presets } from '@anmiles/eslint-config';
 
 		export default [
-			...basePreset,
+			...presets.base,
 
 			/* your own config */
 		];
@@ -47,25 +47,25 @@ __Note that `base` preset is mandatory in all cases.__
 	- For more complex projects use combination of presets
 		- Backend TS project with Jest:
 			```js
-			import { basePreset, tsPreset, jestPreset } from '@anmiles/eslint-config';
+			import { presets } from '@anmiles/eslint-config';
 
 			export default [
-				...basePreset,
-				...tsPreset,
-				...jestPreset,
+				...presets.base,
+				...presets.ts,
+				...presets.jest,
 
 				/* your own config */
 			];
 			```
 		- Frontend TS project with React and Jest:
 			```js
-			import { basePreset, tsPreset, jestPreset, reactPreset } from '@anmiles/eslint-config';
+			import { presets } from '@anmiles/eslint-config';
 
 			export default [
-				...basePreset,
-				...tsPreset,
-				...jestPreset,
-				...reactPreset,
+				...presets.base,
+				...presets.ts,
+				...presets.jest,
+				...presets.react,
 
 				/* your own config */
 			];
@@ -73,13 +73,13 @@ __Note that `base` preset is mandatory in all cases.__
 	- Also you can use type-checked config - `./eslint.config.mts` (or `./eslint.config.ts` for ESM projects)
 		```ts
 		import type { Linter } from 'eslint';
-		import { basePreset, tsPreset, jestPreset, reactPreset } from '@anmiles/eslint-config';
+		import { presets } from '@anmiles/eslint-config';
 
 		export default [
-			...basePreset,
-			...tsPreset,
-			...jestPreset,
-			...reactPreset,
+				...presets.base,
+				...presets.ts,
+				...presets.jest,
+				...presets.react,
 
 			/* your own config */
 
@@ -97,28 +97,16 @@ __Note that `base` preset is mandatory in all cases.__
 
 ## Example
 
-`package.json`:
-``` json
-"scripts": {
-	"lint": "eslint",
-	"lint:fix": "eslint --fix"
-}
-```
-
-`eslint.config.mjs` (with using ts and jest presets):
 ```js
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
-import { basePreset, tsPreset, jestPreset } from './dist/index.mjs';
+import { patterns, presets } from '@anmiles/eslint-config';
 
 export default [
-	...basePreset,
-	...tsPreset,
-	...jestPreset,
+	...presets.base,
+	...presets.ts,
+	...presets.jest,
 	{
-		// TODO: do not import plugin; specify "files" instead
-		plugins : {
-			'@stylistic' : stylisticEslintPlugin,
-		},
+		files : patterns.js,
 		rules : {
 			'@stylistic/object-curly-newline'    : [ 'error', 'always' ],
 			'@stylistic/object-property-newline' : [ 'error', {
