@@ -31,10 +31,13 @@ export default [
 			 * 1. add examples of overriding this rule for ESM and CJS (check on end-projects)
 			 * 2. update eslint.config.mjs
 			 */
-			'import/extensions'                 : [ 'error', 'ignorePackages' ],
-			'import/first'                      : [ 'error' ],
-			'import/group-exports'              : [ 'error' ],
-			'import/newline-after-import'       : [ 'error', { count : 1, considerComments : false } ],
+			'import/extensions'           : [ 'error', 'ignorePackages' ],
+			'import/first'                : [ 'error' ],
+			'import/group-exports'        : [ 'error' ],
+			'import/newline-after-import' : [ 'error', {
+				count            : 1,
+				considerComments : false,
+			} ],
 			'import/no-absolute-path'           : [ 'error' ],
 			'import/no-cycle'                   : [ 'error' ],
 			'import/no-deprecated'              : [ 'error' ],
@@ -42,7 +45,16 @@ export default [
 			'import/no-named-as-default-member' : [ 'off' ],
 			'import/no-useless-path-segments'   : [ 'error' ],
 			'import/order'                      : [ 'error', {
-				groups      : [ 'builtin', 'external', 'unknown', 'internal', 'parent', 'sibling', 'index', 'object' ],
+				groups : [
+					'builtin',
+					'external',
+					'unknown',
+					'internal',
+					'parent',
+					'sibling',
+					'index',
+					'object',
+				],
 				named       : true,
 				alphabetize : {
 					order           : 'asc',
@@ -56,22 +68,14 @@ export default [
 		settings : {
 			'import/extensions' : [
 				'.js',
-				'.jsx',
+				'.mjs',
+				'.cjs',
 				'.ts',
+				'.cts',
+				'.mts',
+				'.jsx',
 				'.tsx',
 			],
-			'import/extensionAlias' : {
-				'.js' : [
-					'.ts',
-					// `.tsx` can also be compiled as `.js`
-					'.tsx',
-					'.d.ts',
-					'.js',
-				],
-				'.jsx' : [ '.tsx', '.d.ts', '.jsx' ],
-				'.cjs' : [ '.cts', '.d.cts', '.cjs' ],
-				'.mjs' : [ '.mts', '.d.mts', '.mjs' ],
-			},
 			'import/parsers' : {
 				'@typescript-eslint/parser' : [
 					'.ts',

@@ -22,7 +22,9 @@ export default [
 		rules : {
 			...promisePlugin.configs['flat/recommended'].rules as Linter.Config['rules'],
 
-			'promise/always-return'             : [ 'error', { ignoreLastCallback : true } ],
+			'promise/always-return' : [ 'error', {
+				ignoreLastCallback : true,
+			} ],
 			'promise/no-callback-in-promise'    : [ 'error' ],
 			'promise/no-multiple-resolved'      : [ 'error' ],
 			'promise/no-nesting'                : [ 'error' ],

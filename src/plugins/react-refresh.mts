@@ -21,7 +21,10 @@ export default [
 		rules : {
 			...reactRefreshPlugin.default.configs.recommended.rules,
 
-			'react-refresh/only-export-components' : [ 'error', { allowConstantExport : true,  customHOCs : [ 'observer' ] } ],
+			'react-refresh/only-export-components' : [ 'error', {
+				allowConstantExport : true,
+				customHOCs          : [ 'observer' ],
+			} ],
 		},
 	},
 ] satisfies Linter.Config[];

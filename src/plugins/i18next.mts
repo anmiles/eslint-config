@@ -21,7 +21,10 @@ export default [
 		rules : {
 			...i18NextPlugin.configs['flat/recommended'].rules,
 
-			'i18next/no-literal-string' : [ 'error', { framework : 'react', 'should-validate-template' : true } ],
+			'i18next/no-literal-string' : [ 'error', {
+				framework                  : 'react',
+				'should-validate-template' : true,
+			} ],
 		},
 	},
 ] satisfies Linter.Config[];

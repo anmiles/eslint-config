@@ -17,14 +17,18 @@ export default [
 		],
 
 		rules : {
-			// '@stylistic/array-element-newline' : [ 'error', { minItems : 2 } ],
-			// TODO: #next better readability of rules
-			// '@stylistic/object-curly-newline'    : [ 'error', 'always' ],
-			// '@stylistic/object-property-newline' : [ 'error', {
-			// 	allowAllPropertiesOnSameLine : false,
-			// } ],
-
-			'import/extensions' : [ 'error', 'ignorePackages', { mts : 'never', mjs : 'always' } ],
+			'@stylistic/max-len' : [ 'error', {
+				code           : 100,
+				tabWidth       : 4,
+				ignoreComments : true,
+			} ],
+			'@stylistic/object-property-newline' : [ 'error', {
+				allowAllPropertiesOnSameLine : true,
+			} ],
+			'import/extensions' : [ 'error', 'ignorePackages', {
+				mts : 'never',
+				mjs : 'always',
+			} ],
 		},
 	},
 	// TODO: #docs add this to an example of overriding rules

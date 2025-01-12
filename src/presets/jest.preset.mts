@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import globals from 'globals';
 
-import jestPlugin from './plugins/jest.mjs';
+import jestPlugin from '../plugins/jest.mjs';
 
 export default [
 	...jestPlugin,

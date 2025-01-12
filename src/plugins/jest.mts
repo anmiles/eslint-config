@@ -26,7 +26,9 @@ export default [
 
 			'jest/no-standalone-expect' : [ 'error' ],
 			'jest/prefer-jest-mocked'   : [ 'error' ],
-			'jest/valid-title'          : [ 'error', { ignoreTypeOfDescribeName : true } ],
+			'jest/valid-title'          : [ 'error', {
+				ignoreTypeOfDescribeName : true,
+			} ],
 		},
 	},
 ] satisfies Linter.Config[];
