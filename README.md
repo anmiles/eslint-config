@@ -161,7 +161,7 @@ export default [
 
 - [Releases · eslint-plugin-react-refresh](https://github.com/ArnaudBarre/eslint-plugin-react-refresh/releases)
 
-#### TODO: #test check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
+#### TODO: #next #3 check whether default and recommended rules work and show errors in case of mistakes (for ALL plugins)
 
 #### TODO: #docs mention all added/changed/removed rules in CHANGELOG.md
 
@@ -173,6 +173,7 @@ https://eslint.org/docs/latest/use/configure/migration-guide
 #### TODO: #docs include in migration guide
 #### TODO: #docs different lists for different presets
 #### TODO: #docs replace ../lib/eslint-config with @anmiles/eslint-config
+#### TODO: #docs check versions
 npm install --save-dev ../lib/eslint-config @eslint/js@9.17.0 @eslint/json@0.9.0 @eslint/markdown@6.2.1 @stylistic/eslint-plugin@2.12.1 @typescript-eslint/eslint-plugin@8.18.2 eslint@9.17.0 eslint-plugin-align-assignments@1.1.2 eslint-plugin-i18next@6.1.1 eslint-plugin-import@2.31.0 eslint-plugin-jest@28.10.0 eslint-plugin-n@17.15.1 eslint-plugin-promise@7.2.1
 npm uninstall eslint-plugin-jsonc
 	npm install --save-dev @eslint/compat@latest

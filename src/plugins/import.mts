@@ -20,7 +20,7 @@ export default [
 			'import/exports-last'                    : [ 'error' ],
 
 			/*
-			 * TODO: #docs
+			 * TODO: #next #2
 			 * 1. add examples of overriding this rule for ESM and CJS (check on end-projects)
 			 * 2. update eslint.config.mjs
 			 */
