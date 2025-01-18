@@ -5,7 +5,7 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		files : patterns.js,
+		files : patterns.base,
 
 		rules : {
 			...eslintPlugin.configs.recommended.rules,

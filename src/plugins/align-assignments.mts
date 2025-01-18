@@ -11,7 +11,7 @@ export default [
 			'align-assignments' : fixupPluginRules(alignAssignmentsPlugin as ESLint.Plugin),
 		},
 
-		files : patterns.js,
+		files : patterns.base,
 
 		rules : {
 			'align-assignments/align-assignments' : [ 'error' ],

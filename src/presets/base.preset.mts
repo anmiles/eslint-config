@@ -22,7 +22,7 @@ export default [
 	...jsonPlugin,
 
 	{
-		files : patterns.js,
+		files : patterns.base,
 
 		languageOptions : {
 			ecmaVersion : 2022,

@@ -11,7 +11,7 @@ export default [
 			'react-redux' : fixupPluginRules(reactReduxPlugin as ESLint.Plugin),
 		},
 
-		files : patterns.js,
+		files : patterns.react,
 
 		rules : {
 			...reactReduxPlugin.configs.recommended.rules as Linter.Config['rules'],

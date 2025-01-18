@@ -9,7 +9,7 @@ export default [
 			'react' : reactPlugin,
 		},
 
-		files : patterns.js,
+		files : patterns.react,
 
 		settings : {
 			react : {
@@ -34,7 +34,7 @@ export default [
 			'react/hook-use-state'                : [ 'error' ],
 			'react/iframe-missing-sandbox'        : [ 'error' ],
 			'react/jsx-filename-extension'        : [ 'error', {
-				extensions : extensions.js,
+				extensions : extensions.react,
 			} ],
 			'react/jsx-fragments'                        : [ 'error', 'syntax' ],
 			'react/jsx-no-constructed-context-values'    : [ 'error' ],

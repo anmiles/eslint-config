@@ -11,7 +11,7 @@ export default [
 			'react-hooks' : fixupPluginRules(reactHooksPlugin as ESLint.Plugin),
 		},
 
-		files : patterns.js,
+		files : patterns.react,
 
 		rules : {
 			...reactHooksPlugin.configs.recommended.rules as Linter.Config['rules'],

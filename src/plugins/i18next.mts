@@ -9,7 +9,7 @@ export default [
 			'i18next' : i18NextPlugin,
 		},
 
-		files : patterns.js,
+		files : patterns.base,
 
 		rules : {
 			...i18NextPlugin.configs['flat/recommended'].rules,

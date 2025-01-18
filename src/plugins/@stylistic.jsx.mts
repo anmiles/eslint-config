@@ -9,7 +9,7 @@ export default [
 			'@stylistic' : stylisticEslintPlugin as ESLint.Plugin,
 		},
 
-		files : patterns.js,
+		files : patterns.react,
 
 		rules : {
 			'@stylistic/jsx-closing-bracket-location' : [ 'error', 'line-aligned' ],

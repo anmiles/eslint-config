@@ -9,7 +9,7 @@ export default [
 			'n' : nodePlugin,
 		},
 
-		files : patterns.js,
+		files : patterns.base,
 
 		rules : {
 			...nodePlugin.configs['flat/recommended'].rules,

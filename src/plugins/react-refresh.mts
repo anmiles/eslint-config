@@ -9,7 +9,7 @@ export default [
 			'react-refresh' : reactRefreshPlugin,
 		},
 
-		files : patterns.js,
+		files : patterns.react,
 
 		rules : {
 			...reactRefreshPlugin.configs.recommended.rules,

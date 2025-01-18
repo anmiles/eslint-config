@@ -106,7 +106,7 @@ export default [
 	...presets.ts,
 	...presets.jest,
 	{
-		files : patterns.js,
+		files : patterns.base,
 		rules : {
 			'@stylistic/object-curly-newline'    : [ 'error', 'always' ],
 			'@stylistic/object-property-newline' : [ 'error', {

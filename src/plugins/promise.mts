@@ -10,7 +10,7 @@ export default [
 			'promise' : promisePlugin as ESLint.Plugin,
 		},
 
-		files : patterns.js,
+		files : patterns.base,
 
 		rules : {
 			...promisePlugin.configs['flat/recommended'].rules as Linter.Config['rules'],

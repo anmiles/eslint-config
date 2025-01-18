@@ -10,7 +10,7 @@ export default [
 			'import' : importPlugin as ESLint.Plugin,
 		},
 
-		files : patterns.js,
+		files : patterns.base,
 
 		rules : {
 			...importPlugin.flatConfigs.recommended.rules as Linter.Config['rules'],
@@ -59,13 +59,13 @@ export default [
 		},
 
 		settings : {
-			'import/extensions' : extensions.js,
+			'import/extensions' : extensions.base,
 			'import/parsers'    : {
 				'@typescript-eslint/parser' : extensions.ts,
 			},
 			'import/resolver' : {
 				node : {
-					extensions : extensions.js,
+					extensions : extensions.base,
 				},
 				typescript : true,
 			},

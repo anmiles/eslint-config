@@ -18,7 +18,7 @@ export default [
 	...reactRefreshPlugin,
 
 	{
-		files : patterns.js,
+		files : patterns.react,
 
 		languageOptions : {
 			ecmaVersion : 2022,

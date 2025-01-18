@@ -9,7 +9,7 @@ export default [
 			'@stylistic' : stylisticEslintPlugin as ESLint.Plugin,
 		},
 
-		files : patterns.js,
+		files : patterns.base,
 
 		rules : {
 			'@stylistic/array-bracket-spacing' : [ 'error', 'always' ],

@@ -5,7 +5,7 @@ export default [
 	...presets.ts,
 	{
 		// TODO: #docs mention that possible problems mostly likely caused with lack of "files" option in override section
-		files : patterns.js,
+		files : patterns.base,
 
 		rules : {
 			'@stylistic/max-len' : [ 'error', {

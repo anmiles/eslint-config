@@ -1,38 +1,64 @@
+const presetNames = [ 'base', 'ts', 'jest', 'react' ] as const;
+
+const jsExtensions = [
+	'.js',
+	'.mjs',
+	'.cjs',
+	'.jsx',
+];
+
+const tsExtensions = [
+	'.ts',
+	'.cts',
+	'.mts',
+	'.tsx',
+];
+
+const jsPatterns = [
+	'**/*.js',
+	'**/*.mjs',
+	'**/*.cjs',
+	'**/*.jsx',
+];
+
+const tsPatterns = [
+	'**/*.ts',
+	'**/*.cts',
+	'**/*.mts',
+	'**/*.tsx',
+];
+
 const extensions = {
-	js : [
-		'.js',
-		'.mjs',
-		'.cjs',
-		'.jsx',
-		'.ts',
-		'.cts',
-		'.mts',
-		'.tsx',
+	base : [
+		...jsExtensions,
+		...tsExtensions,
 	],
 	ts : [
-		'.ts',
-		'.cts',
-		'.mts',
-		'.tsx',
+		...tsExtensions,
 	],
-};
+	jest : [
+		'.test.js',
+		'.test.mjs',
+		'.test.cjs',
+		'.test.jsx',
+		'.test.ts',
+		'.test.cts',
+		'.test.mts',
+		'.test.tsx',
+	],
+	react : [
+		...jsExtensions,
+		...tsExtensions,
+	],
+} satisfies Record<typeof presetNames[number], string[]>;
 
 const patterns = {
-	js : [
-		'**/*.js',
-		'**/*.mjs',
-		'**/*.cjs',
-		'**/*.jsx',
-		'**/*.ts',
-		'**/*.cts',
-		'**/*.mts',
-		'**/*.tsx',
+	base : [
+		...jsPatterns,
+		...tsPatterns,
 	],
 	ts : [
-		'**/*.ts',
-		'**/*.cts',
-		'**/*.mts',
-		'**/*.tsx',
+		...tsPatterns,
 	],
 	jest : [
 		'**/*.test.js',
@@ -44,6 +70,10 @@ const patterns = {
 		'**/*.test.mts',
 		'**/*.test.tsx',
 	],
-};
+	react : [
+		...jsPatterns,
+		...tsPatterns,
+	],
+} satisfies Record<typeof presetNames[number], string[]>;
 
-export { extensions, patterns };
+export { extensions, patterns, presetNames };
