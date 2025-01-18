@@ -41,6 +41,7 @@ export default [
 			'react/jsx-no-leaked-render'                 : [ 'error' ],
 			'react/jsx-no-script-url'                    : [ 'error' ],
 			'react/jsx-no-useless-fragment'              : [ 'error' ],
+			'react/jsx-props-no-spread-multi'            : [ 'error' ],
 			'react/no-access-state-in-setstate'          : [ 'error' ],
 			'react/no-array-index-key'                   : [ 'error' ],
 			'react/no-arrow-function-lifecycle'          : [ 'error' ],

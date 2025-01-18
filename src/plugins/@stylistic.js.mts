@@ -32,7 +32,6 @@ export default [
 				offsetTernaryExpressions                      : true,
 				offsetTernaryExpressionsOffsetCallExpressions : true,
 			} ],
-			// TODO: #next #1 update plugin and add 'ignoredNodes' key
 			'@stylistic/key-spacing' : [ 'error', {
 				beforeColon : true,
 				afterColon  : true,

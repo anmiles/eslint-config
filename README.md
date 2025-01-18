@@ -30,7 +30,7 @@ __Note that `base` preset is mandatory in all cases.__
 	- Additional dependencies for TS:
 		- `npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript`
 	- Additional dependencies for React:
-		- `npm install --save-dev eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh`
+		- `npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh`
 	- Additional dependencies for Jest:
 		- `npm install --save-dev eslint-plugin-jest`
 1. Extend all needed presets in your `./eslint.config.mjs` (or `./eslint.config.js` for ESM projects)
@@ -155,6 +155,8 @@ export default [
 
 - [Releases · eslint-plugin-promise](https://github.com/eslint-community/eslint-plugin-promise/releases)
 
+- [Releases · eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react/releases)
+
 - [Releases · eslint-plugin-react-hooks](https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/CHANGELOG.md)
 
 - [Releases · eslint-plugin-react-redux](https://github.com/DianaSuvorova/eslint-plugin-react-redux/releases)
@@ -191,6 +193,7 @@ npm uninstall eslint-plugin-jsonc
 	npm install --save-dev eslint-plugin-jest@latest
 	npm install --save-dev eslint-plugin-n@latest
 	npm install --save-dev eslint-plugin-promise@latest
+	npm install --save-dev eslint-plugin-react@latest
 	npm install --save-dev eslint-plugin-react-hooks@latest
 	npm install --save-dev eslint-plugin-react-redux@latest
 	npm install --save-dev eslint-plugin-react-refresh@latest
