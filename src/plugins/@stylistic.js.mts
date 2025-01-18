@@ -60,8 +60,9 @@ export default [
 			'@stylistic/multiline-ternary' : [ 'error', 'always-multiline' ],
 			'@stylistic/new-parens'        : [ 'error' ],
 			'@stylistic/no-extra-parens'   : [ 'error', 'all', {
-				ignoreJSX                   : 'multi-line',
-				enforceForArrowConditionals : false,
+				ignoreJSX                    : 'multi-line',
+				enforceForArrowConditionals  : false,
+				nestedConditionalExpressions : false,
 			} ],
 			'@stylistic/no-extra-semi'            : [ 'error' ],
 			'@stylistic/no-floating-decimal'      : [ 'error' ],
