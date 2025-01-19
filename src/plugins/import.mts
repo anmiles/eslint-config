@@ -18,13 +18,12 @@ export default [
 
 			'import/consistent-type-specifier-style' : [ 'error', 'prefer-top-level' ],
 			'import/exports-last'                    : [ 'error' ],
-
-			/*
-			 * TODO: #next #2
-			 * 1. add examples of overriding this rule for ESM and CJS (check on end-projects)
-			 * 2. update eslint.config.mjs
-			 */
-			'import/extensions'           : [ 'error', 'ignorePackages' ],
+			'import/extensions'                      : [ 'error', 'ignorePackages', {
+				'js'  : 'never',
+				'jsx' : 'never',
+				'ts'  : 'never',
+				'tsx' : 'never',
+			} ],
 			'import/first'                : [ 'error' ],
 			'import/group-exports'        : [ 'error' ],
 			'import/newline-after-import' : [ 'error', {

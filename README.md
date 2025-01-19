@@ -108,9 +108,20 @@ export default [
 	{
 		files : patterns.base,
 		rules : {
-			'@stylistic/object-curly-newline'    : [ 'error', 'always' ],
+			'@stylistic/max-len' : [ 'error', {
+				code           : 100,
+				tabWidth       : 4,
+				ignoreComments : true,
+			} ],
 			'@stylistic/object-property-newline' : [ 'error', {
-				allowAllPropertiesOnSameLine : false,
+				allowAllPropertiesOnSameLine : true,
+			} ],
+			// override for TS-ESM project
+			'import/extensions' : [ 'error', 'ignorePackages', {
+				'js'  : 'always',
+				'mjs' : 'always',
+				'ts'  : 'never',
+				'mts' : 'never',
 			} ],
 		},
 	},

@@ -17,8 +17,10 @@ export default [
 				allowAllPropertiesOnSameLine : true,
 			} ],
 			'import/extensions' : [ 'error', 'ignorePackages', {
-				mts : 'never',
-				mjs : 'always',
+				'js'  : 'always',
+				'mjs' : 'always',
+				'ts'  : 'never',
+				'mts' : 'never',
 			} ],
 		},
 	},
