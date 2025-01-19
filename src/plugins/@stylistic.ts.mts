@@ -13,7 +13,10 @@ export default [
 
 		rules : {
 			'@stylistic/member-delimiter-style'  : [ 'error' ],
-			'@stylistic/type-annotation-spacing' : [ 'error' ],
+			'@stylistic/type-annotation-spacing' : [ 'error', {
+				before : true,
+				after  : true,
+			} ],
 		},
 	},
 ] satisfies Linter.Config[];

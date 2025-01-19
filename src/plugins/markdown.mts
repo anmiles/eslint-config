@@ -18,7 +18,7 @@ export default [
 		language : 'markdown/commonmark',
 
 		rules : {
-			...(markdownPlugin.configs?.['recommended'] as Linter.Config).rules,
+			...(markdownPlugin.configs?.['recommended'] as Linter.Config[])?.[0]?.rules,
 		},
 	},
 ] satisfies Linter.Config[];
