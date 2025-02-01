@@ -4,7 +4,7 @@ export default [
 	...presets.base,
 	...presets.ts,
 	{
-		// TODO: #docs mention that possible problems mostly likely caused with lack of "files" option in override section
+		// TODO: #last mention that possible problems mostly likely caused with lack of "files" option in override section
 		files : patterns.base,
 
 		rules : {
@@ -24,7 +24,7 @@ export default [
 			} ],
 		},
 	},
-	// TODO: #docs add this to an example of overriding rules
+	// TODO: #last add this to an example of overriding rules
 	{
 		files : patterns.ts,
 

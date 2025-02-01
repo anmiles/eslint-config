@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update all dependencies to the very latest version
 - Migrate from `eslint-plugin-json` plugin to `@eslint/json` plugin
 
-#### TODO: #docs "see migration guide" link
+#### TODO: #migration "see migration guide" link
 
 ## [8.1.0](../../tags/v8.1.0) - 2024-12-26
 ### Changed
