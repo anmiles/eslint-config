@@ -81,6 +81,7 @@ export default [
 			'@stylistic/operator-linebreak' : [ 'error', 'before' ],
 			'@stylistic/quotes'             : [ 'error', 'single', {
 				avoidEscape : true,
+				allowTemplateLiterals: 'avoidEscape',
 			} ],
 			'@stylistic/semi'                        : [ 'error' ],
 			'@stylistic/semi-spacing'                : [ 'error' ],
@@ -96,6 +97,7 @@ export default [
 			'@stylistic/spaced-comment'         : [ 'error' ],
 			'@stylistic/switch-colon-spacing'   : [ 'error' ],
 			'@stylistic/template-curly-spacing' : [ 'error' ],
+			'@stylistic/type-generic-spacing'   : [ 'error' ],
 			'@stylistic/yield-star-spacing'     : [ 'error' ],
 		},
 	},

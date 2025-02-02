@@ -6,16 +6,64 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [9.0.0](../../tags/v9.0.0) - 2024-12-26
+__(BREAKING) Version 9 is based on ESLint V9 flat configuration. See [migration guide](MIGRATION.md) for details.__
 ### Added
-- `@eslint/json` plugin
-- `@eslint/markdown` plugin
-- `eslint-plugin-i18next` plugin
+- Plugins and rules for them:
+	- `@eslint/json`
+	- `@eslint/markdown`
+	- `eslint-plugin-i18next`
+- Added new rules:
+	- `@stylistic/type-annotation-spacing`
+	- `@stylistic/type-generic-spacing`
+	- `@typescript-eslint/no-unsafe-type-assertion`
+	- `no-useless-assignment`
+	- `no-useless-constructor`
+	- `jest/prefer-jest-mocked`
+	- `promise/prefer-catch`
+	- `promise/spec-only`
+	- `react/jsx-props-no-spread-multi`
+
 ### Changed
 - Migrate to ESLint V9 flat configs
 - Update all dependencies to the very latest version
 - Migrate from `eslint-plugin-json` plugin to `@eslint/json` plugin
+- Updated existing rules:
+	- `@stylistic/indent`
+		- added option `offsetTernaryExpressions : true`
+		- added option `offsetTernaryExpressionsOffsetCallExpressions : true`
+	- `@stylistic/max-len`
+		- removed option `ignoreStrings : true`
+		- added option `ignoreComments : true`
+		- added option `ignoreRegExpLiterals : true`
+		- added option `ignoreTemplateLiterals : true`
+	- `@stylistic/no-extra-parens`
+		- added option `nestedConditionalExpressions : false`
+	- `@stylistic/object-property-newline`
+		- renamed option `allowMultiplePropertiesPerLine` to `allowAllPropertiesOnSameLine`
+	- `@stylistic/quotes`
+		- added option `allowTemplateLiterals: 'avoidEscape'`
+	- `@typescript-eslint/no-unused-vars`
+		- added option `caughtErrorsIgnorePattern : '^_'`
+	- `no-unused-vars`
+		- added option `caughtErrorsIgnorePattern : '^_'`
+	- `import/extensions`
+		- adapted options for new config
+	- `import/order`
+		- changed option `groups`: added `object`
+		- added option `named : true`
+		- added option `alphabetize : { order : 'asc', caseInsensitive : true }`
+		- added option `'newlines-between' : 'always'`
+		- added option `warnOnUnassignedImports : true`
+	- `n/no-extraneous-import`
+		- enabled
+		- added option `allowModules`
+	- `react-refresh/only-export-components`
+		- added option `customHOCs`
 
-#### TODO: #migration "see migration guide" link
+### Removed
+- Deleted rules that were previously disabled
+	- `n/no-missing-require`
+	- `n/no-missing-import`
 
 ## [8.1.0](../../tags/v8.1.0) - 2024-12-26
 ### Changed
@@ -90,8 +138,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Recommended rules for `import` plugin
 - Recommended rules for `@typescript-eslint` plugin
 - Plugins that are used to be installed with `npm init @eslint/config`:
-  - `n`
-  - `promise`
+	- `n`
+	- `promise`
 ### Changed
 - Migrate stylistic rules to `@stylistic` due to moving formatting rules out of ESLint (see https://eslint.style/guide/why)
 - Split into presets to support different combinations of configs.

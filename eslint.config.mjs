@@ -4,9 +4,7 @@ export default [
 	...presets.base,
 	...presets.ts,
 	{
-		// TODO: #last mention that possible problems mostly likely caused with lack of "files" option in override section
 		files : patterns.base,
-
 		rules : {
 			'@stylistic/max-len' : [ 'error', {
 				code           : 100,
@@ -24,10 +22,8 @@ export default [
 			} ],
 		},
 	},
-	// TODO: #last add this to an example of overriding rules
 	{
 		files : patterns.ts,
-
 		rules : {
 			'@typescript-eslint/no-unsafe-type-assertion' : [ 'off' ],
 		},

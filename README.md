@@ -23,16 +23,26 @@ __Note that `base` preset is mandatory in all cases.__
 ## Usage
 
 1. Install this package
-	- `npm install --save-dev @anmiles/eslint-config`
+	```bash
+	npm install --save-dev @anmiles/eslint-config
+	```
 1. Install required devDependencies
 	- Base dependencies for all files:
-		- `npm install --save-dev eslint eslint-plugin-align-assignments eslint-plugin-i18next eslint-plugin-import eslint-plugin-n eslint-plugin-promise @eslint/compat @eslint/js @eslint/json @eslint/markdown @stylistic/eslint-plugin`
+		```bash
+		npm install --save-dev eslint eslint-plugin-align-assignments eslint-plugin-i18next eslint-plugin-import eslint-plugin-n eslint-plugin-promise @eslint/compat @eslint/js @eslint/json @eslint/markdown @stylistic/eslint-plugin
+		```
 	- Additional dependencies for TS:
-		- `npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript`
+		```bash
+		npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript
+		```
 	- Additional dependencies for React:
-		- `npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh`
+		```bash
+		npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh`
+		```
 	- Additional dependencies for Jest:
-		- `npm install --save-dev eslint-plugin-jest`
+		```bash
+		npm install --save-dev eslint-plugin-jest
+		```
 1. Extend all needed presets in your `./eslint.config.mjs` (or `./eslint.config.js` for ESM projects)
 	- For JS-only projects (without TS, React, Jest) use base preset:
 		```js
@@ -126,6 +136,12 @@ export default [
 		},
 	},
 	{
+		files : patterns.ts,
+		rules : {
+			'@typescript-eslint/no-unsafe-type-assertion' : [ 'off' ],
+		},
+	},
+	{
 		ignores : [
 			'dist/*',
 			'coverage/*',
@@ -138,7 +154,11 @@ export default [
 ## Notes
 - `package-lock.json` doesn't have to be ignored. It's already ignored in configuration for `json` plugin inside `base` preset.
 - `node_modules` doesn't have to be ignored. It's implicitly ignored by ESLint.
+- Remember to provide `files` option in override sections to specify a set of extensions for which the section applies.
 - Don't keep `.eslintignore` file when using Flat Config. Use `ignores` config key instead (see the example above).
+
+## Migration to ESLint V9 flat configuration
+Version 9 is based on ESLint V9 flat configuration. See [migration guide](MIGRATION.md) if you had been using version 8 or below.
 
 ## Links
 
@@ -173,37 +193,3 @@ export default [
 - [Releases · eslint-plugin-react-redux](https://github.com/DianaSuvorova/eslint-plugin-react-redux/releases)
 
 - [Releases · eslint-plugin-react-refresh](https://github.com/ArnaudBarre/eslint-plugin-react-refresh/releases)
-
-#### TODO: #last mention all added/changed/removed rules in CHANGELOG.md
-
-## Official migration guide
-Configuration Migration Guide - ESLint - Pluggable JavaScript Linter
-https://eslint.org/docs/latest/use/configure/migration-guide
-### TODO: #migration include link to the file that contains everything from TODO.md as an example of migration
-
-### TODO: #migration include in migration guide
-### TODO: #migration different lists for different presets
-### TODO: #last replace ../lib/eslint-config with @anmiles/eslint-config
-### TODO: #last replace ../lib/eslint-config with @anmiles/eslint-config in all end projects
-### TODO: #migration check versions
-npm install --save-dev ../lib/eslint-config @eslint/js@9.17.0 @eslint/json@0.9.0 @eslint/markdown@6.2.1 @stylistic/eslint-plugin@2.12.1 @typescript-eslint/eslint-plugin@8.18.2 eslint@9.17.0 eslint-plugin-align-assignments@1.1.2 eslint-plugin-i18next@6.1.1 eslint-plugin-import@2.31.0 eslint-plugin-jest@28.10.0 eslint-plugin-n@17.15.1 eslint-plugin-promise@7.2.1
-npm uninstall eslint-plugin-jsonc
-	npm install --save-dev @eslint/compat@latest
-	npm install --save-dev @eslint/js@latest
-	npm install --save-dev @eslint/json@latest
-	npm install --save-dev @eslint/markdown@latest
-	npm install --save-dev @stylistic/eslint-plugin@latest
-	npm install --save-dev @typescript-eslint/eslint-plugin@latest
-	npm install --save-dev @typescript-eslint/parser@latest
-	npm install --save-dev eslint@latest
-	npm install --save-dev eslint-import-resolver-typescript@latest
-	npm install --save-dev eslint-plugin-align-assignments@latest
-	npm install --save-dev eslint-plugin-i18next@latest
-	npm install --save-dev eslint-plugin-import@latest
-	npm install --save-dev eslint-plugin-jest@latest
-	npm install --save-dev eslint-plugin-n@latest
-	npm install --save-dev eslint-plugin-promise@latest
-	npm install --save-dev eslint-plugin-react@latest
-	npm install --save-dev eslint-plugin-react-hooks@latest
-	npm install --save-dev eslint-plugin-react-redux@latest
-	npm install --save-dev eslint-plugin-react-refresh@latest
