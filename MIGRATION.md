@@ -265,6 +265,12 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		ignores: ["**/temp.js", "config/*"]
 		```
+		or use pre-defined patterns ([see more](README.md#exported-constants))
+		```js
+		import { patterns } from '@anmiles/eslint-config';
+		/* ... */
+		ignores: patterns.base
+		```
 
 ## Notes
 - Remember to provide `files` option in override sections to specify a set of extensions for which the section applies.

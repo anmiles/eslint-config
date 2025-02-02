@@ -151,10 +151,24 @@ export default [
 ];
 ```
 
+## Exported constants
+
+Patterns and extensions are also exported.
+
+```js
+import { patterns, presets } from '@anmiles/eslint-config';
+
+console.log(extensions.base); // [ '.js', '.mjs', '.cjs', '.jsx', '.ts', '.cts', '.mts', '.tsx' ]
+console.log(extensions.jest); // [ '.test.js', '.test.mjs', '.test.cjs', '.test.jsx', '.test.ts', '.test.cts', '.test.mts', '.test.tsx' ]
+console.log(patterns.ts);     // [ '**/*.ts', '**/*.cts', '**/*.mts', '**/*.tsx' ]
+console.log(patterns.react);  // [ '**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx', '**/*.ts', '**/*.cts', '**/*.mts', '**/*.tsx' ]
+```
+
 ## Notes
 - `package-lock.json` doesn't have to be ignored. It's already ignored in configuration for `json` plugin inside `base` preset.
 - `node_modules` doesn't have to be ignored. It's implicitly ignored by ESLint.
 - Remember to provide `files` option in override sections to specify a set of extensions for which the section applies.
+  - There are some patterns to use ([see above](#exported-constants))
 - Don't keep `.eslintignore` file when using Flat Config. Use `ignores` config key instead (see the example above).
 
 ## Migration to ESLint V9 flat configuration

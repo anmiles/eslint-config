@@ -22,6 +22,9 @@ __(BREAKING) Version 9 is based on ESLint V9 flat configuration. See [migration 
 	- `promise/prefer-catch`
 	- `promise/spec-only`
 	- `react/jsx-props-no-spread-multi`
+- Exported constants ([see details](README.md#exported-constants))
+	- `extensions`
+	- `patterns`
 
 ### Changed
 - Migrate to ESLint V9 flat configs
