@@ -1,8 +1,10 @@
 # Migration to ESLint V9 flat configuration
 
-## TODO: #next apply this guide to every end-project
-## TODO: #last replace ../lib/eslint-config with @anmiles/eslint-config
-## TODO: #last replace ../lib/eslint-config with @anmiles/eslint-config in all end projects
+## TODO: #next for every end-project install local (`../`) version of `@anmiles/*` packages (that is ready-to-publish) and run npm commands
+## TODO: #last replace `../eslint-config` with `@anmiles/eslint-config` everywhere
+## TODO: #last replace `../` paths to locally installed packages in all end projects
+## TODO: #last re-run `npm install` each package (with @latest) to properly replace installed packages
+## TODO: #last run `ncu` to check outdated dependencies
 
 ## Dependencies
 

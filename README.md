@@ -20,11 +20,11 @@ For JS-only projects (without TS, Jest, React) use base preset.
 For more complex projects use combination of presets.
 __Note that `base` preset is mandatory in all cases.__
 
-## Usage
+## Installation
 
 1. Install this package
 	```bash
-	npm install --save-dev @anmiles/eslint-config
+	npm install --save-dev ../eslint-config
 	```
 1. Install required devDependencies
 	- Base dependencies for all files:
@@ -33,16 +33,19 @@ __Note that `base` preset is mandatory in all cases.__
 		```
 	- Additional dependencies for TS:
 		```bash
-		npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript
+		npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript jiti typescript
 		```
 	- Additional dependencies for React:
 		```bash
-		npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh`
+		npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh
 		```
 	- Additional dependencies for Jest:
 		```bash
-		npm install --save-dev eslint-plugin-jest
+		npm install --save-dev eslint-plugin-jest jest
 		```
+
+## Usage
+
 1. Extend all needed presets in your `./eslint.config.mjs` (or `./eslint.config.js` for ESM projects)
 	- For JS-only projects (without TS, React, Jest) use base preset:
 		```js
@@ -80,7 +83,7 @@ __Note that `base` preset is mandatory in all cases.__
 				/* your own config */
 			];
 			```
-	- Also you can use type-checked config - `./eslint.config.mts` (or `./eslint.config.ts` for ESM projects)
+	- Also you can use type-checked config - `./eslint.config.mts` (or `./eslint.config.ts` for ESM projects). This requires `jiti` ([why?](https://eslint.org/blog/2024/08/eslint-v9.9.0-released/))
 		```ts
 		import type { Linter } from 'eslint';
 		import { presets } from '@anmiles/eslint-config';
@@ -93,7 +96,7 @@ __Note that `base` preset is mandatory in all cases.__
 
 			/* your own config */
 
-		] satisfies Linter.Config[];
+		] as Linter.Config[];
 		```
 1. Specify npm commands
 
@@ -107,6 +110,7 @@ __Note that `base` preset is mandatory in all cases.__
 
 ## Example
 
+Javascript:
 ```js
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
 import { patterns, presets } from '@anmiles/eslint-config';
@@ -143,12 +147,58 @@ export default [
 	},
 	{
 		ignores : [
-			'dist/*',
 			'coverage/*',
+			'dist/*',
 			'**/__snapshots__/*',
 		],
 	},
 ];
+```
+
+Typescript:
+```ts
+import stylisticEslintPlugin from '@stylistic/eslint-plugin';
+import type { Linter } from 'eslint';
+import { patterns, presets } from '@anmiles/eslint-config';
+
+export default [
+	...presets.base,
+	...presets.ts,
+	...presets.jest,
+	{
+		files : patterns.base,
+		rules : {
+			'@stylistic/max-len' : [ 'error', {
+				code           : 100,
+				tabWidth       : 4,
+				ignoreComments : true,
+			} ],
+			'@stylistic/object-property-newline' : [ 'error', {
+				allowAllPropertiesOnSameLine : true,
+			} ],
+			// override for TS-ESM project
+			'import/extensions' : [ 'error', 'ignorePackages', {
+				'js'  : 'always',
+				'mjs' : 'always',
+				'ts'  : 'never',
+				'mts' : 'never',
+			} ],
+		},
+	},
+	{
+		files : patterns.ts,
+		rules : {
+			'@typescript-eslint/no-unsafe-type-assertion' : [ 'off' ],
+		},
+	},
+	{
+		ignores : [
+			'coverage/*',
+			'dist/*',
+			'**/__snapshots__/*',
+		],
+	},
+] as Linter.Config[];
 ```
 
 ## Exported constants

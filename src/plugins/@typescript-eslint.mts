@@ -17,6 +17,7 @@ export default [
 
 			'max-params'            : [ 'off' ],
 			'no-loop-func'          : [ 'off' ],
+			'no-redeclare'          : [ 'off' ],
 			'no-shadow'             : [ 'off' ],
 			'no-unused-expressions' : [ 'off' ],
 			'no-unused-vars'        : [ 'off' ],
@@ -24,6 +25,8 @@ export default [
 
 			'import/no-named-as-default' : [ 'off' ],
 			'import/no-unresolved'       : [ 'off' ],
+
+			'n/no-missing-import' : [ 'off' ],
 
 			'@typescript-eslint/array-type'              : [ 'off' ],
 			'@typescript-eslint/ban-ts-comment'          : [ 'error' ],

@@ -33,9 +33,13 @@ export default [
 				offsetTernaryExpressionsOffsetCallExpressions : true,
 			} ],
 			'@stylistic/key-spacing' : [ 'error', {
-				beforeColon : true,
-				afterColon  : true,
-				align       : 'colon',
+				beforeColon  : true,
+				afterColon   : true,
+				align        : 'colon',
+				ignoredNodes : [
+					'TSInterfaceBody',
+					'TSTypeLiteral',
+				],
 			} ],
 			'@stylistic/keyword-spacing'      : [ 'error' ],
 			'@stylistic/linebreak-style'      : [ 'error', 'unix' ],

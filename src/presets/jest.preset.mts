@@ -23,4 +23,4 @@ export default [
 			reportUnusedDisableDirectives : 'warn',
 		},
 	},
-] satisfies Linter.Config[];
+] as Linter.Config[];
