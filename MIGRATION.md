@@ -12,27 +12,8 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 	```bash
 	npm uninstall @anmiles/eslint-config @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-import-resolver-typescript eslint-plugin-align-assignments eslint-plugin-import eslint-plugin-jest eslint-plugin-jsonc eslint-plugin-n eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh
 	```
-1. Install this package
-	```bash
-	npm install --save-dev ../lib/eslint-config
-	```
-1. Install required devDependencies
-	- Base dependencies for all files:
-		```bash
-		npm install --save-dev eslint eslint-plugin-align-assignments eslint-plugin-i18next eslint-plugin-import eslint-plugin-n eslint-plugin-promise @eslint/compat @eslint/js @eslint/json @eslint/markdown @stylistic/eslint-plugin
-		```
-	- Additional dependencies for TS:
-		```bash
-		npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript
-		```
-	- Additional dependencies for React:
-		```bash
-		npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh
-		```
-	- Additional dependencies for Jest:
-		```bash
-		npm install --save-dev eslint-plugin-jest
-		```
+1. Install this package and required devDependencies
+	- see [README.md](README.md#installation)
 
 ## Configuration changes
 
@@ -43,11 +24,11 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 1. Switch to ESM export
 	- BEFORE:
 		```js
-		module.exports { /* configuration */ }
+		module.exports { /* configuration */ };
 		```
 	- AFTER:
 		```js
-		export default [ /* array of configurations */ ]
+		export default [ /* array of configurations */ ];
 		```
 
 1. Export an array of configurations instead of declaring overrides
@@ -56,16 +37,16 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		module.exports = {
 			overrides: [
 				{ /* configuration 1 */ },
-				{ /* configuration 2 */ }
-			]
-		}
+				{ /* configuration 2 */ },
+			],
+		};
 		```
 	- AFTER:
 		```js
 		export default [
 			{ /* configuration 1 */ },
-			{ /* configuration 2 */ }
-		]
+			{ /* configuration 2 */ },
+		];
 		```
 		Please make sure that every configuration has `files` option.
 
@@ -74,8 +55,8 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		extends: [
 			"eslint:recommended",
-			"custom-config"
-		]
+			"custom-config",
+		],
 		```
 	- AFTER:
 		```js
@@ -85,41 +66,41 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		export default [
 			js.configs.recommended,
 			customConfig,
-			{ /* override configuration */ }
-		]
+			{ /* override configuration */ },
+		];
 		```
 
 1. Import plugins rather than declare them literally
 	- BEFORE:
 		```js
-		plugins: ["jsdoc"]
+		plugins: ["jsdoc"],
 		```
 	- AFTER:
 		```js
 		import jsdoc from 'eslint-plugin-jsdoc';
 		/* ... */
-		plugins: { jsdoc }
+		plugins: { jsdoc },
 		```
 
 1. Import parsers rather than declare them literally
 	- BEFORE:
 		```js
-		parser: "@babel/eslint-parser"
+		parser: "@babel/eslint-parser",
 		```
 	- AFTER:
 		```js
 		import babelParser from '@babel/eslint-parser';
 		/* ... */
 		languageOptions: {
-			parser: babelParser
-		}
+			parser: babelParser,
+		},
 		```
 
 1. Import globals rather than declare them literally
 	- BEFORE:
 		```js
 		env: {
-			browser: true
+			browser: true,
 		},
 		```
 	- AFTER:
@@ -128,25 +109,25 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		/* ... */
 		languageOptions: {
 			globals: {
-				...globals.browser
-			}
-		}
+				...globals.browser,
+			},
+		},
 		```
 
 1. Place custom globals into `languageOptions` together with built-in globals
 	- BEFORE:
 		```js
 		globals: {
-			custom: 'value'
-		}
+			custom: 'value',
+		},
 		```
 	- AFTER:
 		```js
 		languageOptions: {
 			globals: {
-				custom: 'value'
-			}
-		}
+				custom: 'value',
+			},
+		},
 		```
 
 1. Move parser options into `languageOptions`
@@ -154,27 +135,27 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		parserOptions: {
 			ecmaVersion: 2022,
-			sourceType: "module"
-		}
+			sourceType: "module",
+		},
 		```
 	- AFTER:
 		```js
 		languageOptions: {
 			ecmaVersion: 2022,
-			sourceType: "module"
-		}
+			sourceType: "module",
+		},
 		```
 
 1. Move `reportUnusedDisableDirectives` into `linterOptions`
 	- BEFORE:
 		```js
-		reportUnusedDisableDirectives: true
+		reportUnusedDisableDirectives: true,
 		```
 	- AFTER:
 		```js
 		linterOptions: {
-			reportUnusedDisableDirectives: 'warn'
-		}
+			reportUnusedDisableDirectives: 'warn',
+		},
 		```
 
 1. Replace `ignorePatterns` option with `ignores` and use globs
@@ -182,15 +163,15 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		ignorePatterns: [
 			'temp.js',
-			'config/*'
-		]
+			'config/*',
+		],
 		```
 	- AFTER:
 		```js
 		ignores: [
 			'**/temp.js',
-			'config/*'
-		]
+			'config/*',
+		],
 		```
 
 1. Use globs in `files` option
@@ -198,15 +179,15 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		files: [
 			'*.ts',
-			'*.tsx'
-		]
+			'*.tsx',
+		],
 		```
 	- AFTER:
 		```js
 		files: [
 			'**/*.ts',
-			'**/*.tsx'
-		]
+			'**/*.tsx',
+		],
 		```
 
 ## Command line changes (also applied for lint command in package.json)
@@ -226,8 +207,8 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		files: [
 			'**/*.ts',
-			'**/*.tsx'
-		]
+			'**/*.tsx',
+		],
 		```
 
 1. Move everything from `eslintConfig` section in `package.json` to configuration file
@@ -248,9 +229,9 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		languageOptions: {
 			globals: {
-				...globals.mocha
-			}
-		}
+				...globals.mocha,
+			},
+		},
 		```
 
 1. Move ignores from `.eslintignore` to `ignores` option and get rid of `.eslintignore`
@@ -263,18 +244,23 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 	- AFTER:
 		`configuration`:
 		```js
-		ignores: ["**/temp.js", "config/*"]
+		ignores: [
+			'**/temp.js',
+			'config/*',
+		],
 		```
 		or use pre-defined patterns ([see more](README.md#exported-constants))
 		```js
 		import { patterns } from '@anmiles/eslint-config';
 		/* ... */
-		ignores: patterns.base
+		ignores: patterns.base,
 		```
 
-## Notes
-- Remember to provide `files` option in override sections to specify a set of extensions for which the section applies.
-- Don't keep `.eslintignore` file when using Flat Config. Use `ignores` config key instead.
+See [examples](README.md#example) of final configurations.
+
+## Other notes
+
+See [notes](README.md#notes).
 
 ## Links
 
