@@ -9,9 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 __(BREAKING) Version 9 is based on ESLint V9 flat configuration. See [migration guide](MIGRATION.md) for details.__
 ### Added
 - Plugins and rules for them:
+	- `@eslint/css`
 	- `@eslint/json`
 	- `@eslint/markdown`
 	- `eslint-plugin-i18next`
+#### TODO: double-check list
 - Added new rules:
 	- `@stylistic/type-annotation-spacing`
 	- `@stylistic/type-generic-spacing`

@@ -29,7 +29,7 @@ __Note that `base` preset is mandatory in all cases.__
 1. Install required devDependencies
 	- Base dependencies for all files:
 		```bash
-		npm install --save-dev eslint eslint-plugin-align-assignments eslint-plugin-i18next eslint-plugin-import eslint-plugin-n eslint-plugin-promise @eslint/compat @eslint/js @eslint/json @eslint/markdown @stylistic/eslint-plugin
+		npm install --save-dev eslint eslint-plugin-align-assignments eslint-plugin-i18next eslint-plugin-import eslint-plugin-n eslint-plugin-promise @eslint/compat @eslint/css @eslint/js @eslint/json @eslint/markdown @stylistic/eslint-plugin
 		```
 	- Additional dependencies for TS:
 		```bash
@@ -233,6 +233,8 @@ Version 9 is based on ESLint V9 flat configuration. See [migration guide](MIGRAT
 ## Links
 
 ### Release notes of ESLint plugins
+
+- [Releases · @eslint/css](https://github.com/eslint/css/releases)
 
 - [Releases · @eslint/js](https://github.com/eslint/eslint/releases)
 

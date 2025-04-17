@@ -5,6 +5,7 @@ import { patterns } from '../lib/constants.mjs';
 import stylisticJsPlugin from '../plugins/@stylistic.js.mjs';
 import alignAssignmentsPlugin from '../plugins/align-assignments.mjs';
 import basePlugin from '../plugins/base.mjs';
+import cssPlugin from '../plugins/css.mjs';
 import importPlugin from '../plugins/import.mjs';
 import jsonPlugin from '../plugins/json.mjs';
 import markdownPlugin from '../plugins/markdown.mjs';
@@ -15,6 +16,7 @@ export default [
 	...basePlugin,
 	...stylisticJsPlugin,
 	...alignAssignmentsPlugin,
+	...cssPlugin,
 	...importPlugin,
 	...markdownPlugin,
 	...nPlugin,
