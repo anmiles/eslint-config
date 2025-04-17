@@ -3,6 +3,13 @@ import { patterns, presets } from './dist/index.mjs';
 export default [
 	...presets.base,
 	...presets.ts,
+
+	{
+		ignores : [
+			'dist/*',
+		],
+	},
+
 	{
 		files : patterns.base,
 		rules : {
@@ -22,15 +29,11 @@ export default [
 			} ],
 		},
 	},
+
 	{
 		files : patterns.ts,
 		rules : {
 			'@typescript-eslint/no-unsafe-type-assertion' : [ 'off' ],
 		},
-	},
-	{
-		ignores : [
-			'dist/*',
-		],
 	},
 ];

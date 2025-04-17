@@ -37,5 +37,9 @@ export default [
 		linterOptions : {
 			reportUnusedDisableDirectives : 'warn',
 		},
+
+		rules : {
+			'n/no-unsupported-features/node-builtins' : [ 'off' ],
+		},
 	},
 ] as Linter.Config[];

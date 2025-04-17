@@ -20,6 +20,7 @@ export default [
 			'max-params' : [ 'error', {
 				max : 5,
 			} ],
+			'no-console'            : [ 'error' ],
 			'no-eval'               : [ 'error' ],
 			'no-extra-bind'         : [ 'error' ],
 			'no-implied-eval'       : [ 'error' ],

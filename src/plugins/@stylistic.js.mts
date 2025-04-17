@@ -39,6 +39,7 @@ export default [
 				ignoredNodes : [
 					'TSInterfaceBody',
 					'TSTypeLiteral',
+					'ClassBody',
 				],
 			} ],
 			'@stylistic/keyword-spacing'      : [ 'error' ],

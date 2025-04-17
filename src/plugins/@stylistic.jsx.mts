@@ -27,15 +27,8 @@ export default [
 					objectLiterals : 'never',
 				},
 			} ],
-			'@stylistic/jsx-equals-spacing'      : [ 'error' ],
-			'@stylistic/jsx-first-prop-new-line' : [ 'error' ],
-			'@stylistic/jsx-indent'              : [ 'error',
-				'tab',
-				{
-					checkAttributes          : true,
-					indentLogicalExpressions : true,
-				},
-			],
+			'@stylistic/jsx-equals-spacing'          : [ 'error' ],
+			'@stylistic/jsx-first-prop-new-line'     : [ 'error' ],
 			'@stylistic/jsx-indent-props'            : [ 'error', 'tab' ],
 			'@stylistic/jsx-one-expression-per-line' : [ 'error', {
 				allow : 'non-jsx',

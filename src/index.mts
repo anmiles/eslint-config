@@ -1,4 +1,5 @@
 import type { Linter } from 'eslint';
+import globals from 'globals';
 
 import type { presetNames } from './lib/constants.mjs';
 import { extensions, patterns } from './lib/constants.mjs';
@@ -10,4 +11,4 @@ import { default as ts } from './presets/ts.preset.mjs';
 const presets = { base, jest, react, ts } satisfies
     Record<typeof presetNames[number], Linter.Config[]>;
 
-export { extensions, patterns, presets };
+export { extensions, globals, patterns, presets };

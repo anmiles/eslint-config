@@ -32,7 +32,9 @@ export default [
 	},
 
 	{
-		files : [ 'eslint.config.*ts' ],
+		files : [
+			'**/eslint.config.*ts',
+		],
 
 		languageOptions : {
 			parserOptions : {
