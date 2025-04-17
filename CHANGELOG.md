@@ -44,7 +44,7 @@ __(BREAKING) Version 9 is based on ESLint V9 flat configuration. See [migration 
 	- `@stylistic/object-property-newline`
 		- renamed option `allowMultiplePropertiesPerLine` to `allowAllPropertiesOnSameLine`
 	- `@stylistic/quotes`
-		- added option `allowTemplateLiterals: 'avoidEscape'`
+		- added option `allowTemplateLiterals : 'avoidEscape'`
 	- `@typescript-eslint/no-unused-vars`
 		- added option `caughtErrorsIgnorePattern : '^_'`
 	- `no-unused-vars`
