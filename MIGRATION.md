@@ -1,9 +1,15 @@
 # Migration to ESLint V9 flat configuration
 
-## TODO: #next for every end-project install local (`../`) version of `@anmiles/*` packages (that is ready-to-publish) and run npm commands
+## TODO: https://eslint.org/blog/2025/02/eslint-css-support/
+## TODO: check all JS-repositories for having CSS files and add @eslint/css dependency
+## TODO: enhance logger: output date (or is it output now)?
+## TODO: gitservice scan: detect order.repositories file and try to sort as specified there; then reorder current repositories once
+## TODO: for every end-project run npm commands (youtube-likes-downloader is last done)
 ## TODO: #last replace `../eslint-config` with `@anmiles/eslint-config` everywhere
 ## TODO: #last replace `../` paths to locally installed packages in all end projects
+## TODO: #last run `npmc`
 ## TODO: #last re-run `npm install` each package (with @latest) to properly replace installed packages
+## TODO: #last run `npms` to perform all checks
 ## TODO: #last run `ncu` to check outdated dependencies
 
 ## Dependencies
@@ -23,7 +29,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 
 1. Remove `root: true` option. Flat config files always act as if root: true is set.
 
-1. Switch to ESM export
+1. Switch to ESM export (although the config still might by used in CommonJS projects)
 	- BEFORE:
 		```js
 		module.exports { /* configuration */ };
@@ -37,7 +43,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 	- BEFORE:
 		```js
 		module.exports = {
-			overrides: [
+			overrides : [
 				{ /* configuration 1 */ },
 				{ /* configuration 2 */ },
 			],
@@ -81,7 +87,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		import jsdoc from 'eslint-plugin-jsdoc';
 		/* ... */
-		plugins: { jsdoc },
+		plugins : { jsdoc },
 		```
 
 1. Import parsers rather than declare them literally
@@ -93,8 +99,8 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		import babelParser from '@babel/eslint-parser';
 		/* ... */
-		languageOptions: {
-			parser: babelParser,
+		languageOptions : {
+			parser : babelParser,
 		},
 		```
 
@@ -107,10 +113,10 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```
 	- AFTER:
 		```js
-		import globals from 'globals';
+		import { globals } from '@anmiles/eslint-config';
 		/* ... */
-		languageOptions: {
-			globals: {
+		languageOptions : {
+			globals : {
 				...globals.browser,
 			},
 		},
@@ -125,9 +131,9 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```
 	- AFTER:
 		```js
-		languageOptions: {
-			globals: {
-				custom: 'value',
+		languageOptions : {
+			globals : {
+				custom : 'value',
 			},
 		},
 		```
@@ -142,9 +148,9 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```
 	- AFTER:
 		```js
-		languageOptions: {
-			ecmaVersion: 2022,
-			sourceType: "module",
+		languageOptions : {
+			ecmaVersion : 2022,
+			sourceType : "module",
 		},
 		```
 
@@ -156,7 +162,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 	- AFTER:
 		```js
 		linterOptions: {
-			reportUnusedDisableDirectives: 'warn',
+			reportUnusedDisableDirectives : 'warn',
 		},
 		```
 
@@ -170,7 +176,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```
 	- AFTER:
 		```js
-		ignores: [
+		ignores : [
 			'**/temp.js',
 			'config/*',
 		],
@@ -186,7 +192,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```
 	- AFTER:
 		```js
-		files: [
+		files : [
 			'**/*.ts',
 			'**/*.tsx',
 		],
@@ -207,7 +213,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 	- AFTER:
 		`configuration`:
 		```js
-		files: [
+		files : [
 			'**/*.ts',
 			'**/*.tsx',
 		],
@@ -229,8 +235,8 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```
 		or configuration
 		```js
-		languageOptions: {
-			globals: {
+		languageOptions : {
+			globals : {
 				...globals.mocha,
 			},
 		},
@@ -246,7 +252,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 	- AFTER:
 		`configuration`:
 		```js
-		ignores: [
+		ignores : [
 			'**/temp.js',
 			'config/*',
 		],
@@ -255,7 +261,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 		```js
 		import { patterns } from '@anmiles/eslint-config';
 		/* ... */
-		ignores: patterns.base,
+		ignores : patterns.base,
 		```
 
 See [examples](README.md#example) of final configurations.

@@ -119,6 +119,15 @@ export default [
 	...presets.base,
 	...presets.ts,
 	...presets.jest,
+
+	{
+		ignores : [
+			'coverage/*',
+			'dist/*',
+			'**/__snapshots__/*',
+		],
+	},
+
 	{
 		files : patterns.base,
 		rules : {
@@ -139,18 +148,12 @@ export default [
 			} ],
 		},
 	},
+
 	{
 		files : patterns.ts,
 		rules : {
 			'@typescript-eslint/no-unsafe-type-assertion' : [ 'off' ],
 		},
-	},
-	{
-		ignores : [
-			'coverage/*',
-			'dist/*',
-			'**/__snapshots__/*',
-		],
 	},
 ];
 ```
@@ -165,6 +168,15 @@ export default [
 	...presets.base,
 	...presets.ts,
 	...presets.jest,
+
+	{
+		ignores : [
+			'coverage/*',
+			'dist/*',
+			'**/__snapshots__/*',
+		],
+	},
+
 	{
 		files : patterns.base,
 		rules : {
@@ -185,18 +197,12 @@ export default [
 			} ],
 		},
 	},
+
 	{
 		files : patterns.ts,
 		rules : {
 			'@typescript-eslint/no-unsafe-type-assertion' : [ 'off' ],
 		},
-	},
-	{
-		ignores : [
-			'coverage/*',
-			'dist/*',
-			'**/__snapshots__/*',
-		],
 	},
 ] as Linter.Config[];
 ```
