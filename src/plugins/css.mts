@@ -3,17 +3,17 @@ import type { Linter } from 'eslint';
 
 export default [
 	{
-		plugins : {
-			'import' : cssPlugin,
+		plugins: {
+			'css': cssPlugin,
 		},
 
-		files : [
+		files: [
 			'**/*.css',
 		],
 
-		language : 'css/css',
+		language: 'css/css',
 
-		rules : {
+		rules: {
 			...cssPlugin.configs.recommended.rules,
 		},
 	},

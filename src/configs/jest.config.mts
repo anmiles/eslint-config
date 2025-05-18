@@ -8,19 +8,19 @@ export default [
 	...jestPlugin,
 
 	{
-		files : patterns.jest,
+		files: patterns.jest,
 
-		languageOptions : {
-			ecmaVersion : 2022,
-			sourceType  : 'module',
-			globals     : {
+		languageOptions: {
+			ecmaVersion: 2022,
+			sourceType : 'module',
+			globals    : {
 				...globals.es2021,
 				...globals.jest,
 			},
 		},
 
-		linterOptions : {
-			reportUnusedDisableDirectives : 'warn',
+		linterOptions: {
+			reportUnusedDisableDirectives: 'warn',
 		},
 	},
 ] as Linter.Config[];

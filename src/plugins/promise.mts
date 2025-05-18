@@ -6,28 +6,28 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		plugins : {
-			'promise' : promisePlugin as ESLint.Plugin,
+		plugins: {
+			'promise': promisePlugin as ESLint.Plugin,
 		},
 
-		files : patterns.base,
+		files: patterns.base,
 
-		rules : {
+		rules: {
 			...promisePlugin.configs['flat/recommended'].rules as Linter.Config['rules'],
 
-			'promise/always-return' : [ 'error', {
-				ignoreLastCallback : true,
+			'promise/always-return': [ 'error', {
+				ignoreLastCallback: true,
 			} ],
-			'promise/no-callback-in-promise'    : [ 'error' ],
-			'promise/no-multiple-resolved'      : [ 'error' ],
-			'promise/no-nesting'                : [ 'error' ],
-			'promise/no-promise-in-callback'    : [ 'error' ],
-			'promise/no-return-in-finally'      : [ 'error' ],
-			'promise/prefer-await-to-callbacks' : [ 'error' ],
-			'promise/prefer-await-to-then'      : [ 'error' ],
-			'promise/prefer-catch'              : [ 'error' ],
-			'promise/spec-only'                 : [ 'error' ],
-			'promise/valid-params'              : [ 'error' ],
+			'promise/no-callback-in-promise'   : [ 'error' ],
+			'promise/no-multiple-resolved'     : [ 'error' ],
+			'promise/no-nesting'               : [ 'error' ],
+			'promise/no-promise-in-callback'   : [ 'error' ],
+			'promise/no-return-in-finally'     : [ 'error' ],
+			'promise/prefer-await-to-callbacks': [ 'error' ],
+			'promise/prefer-await-to-then'     : [ 'error' ],
+			'promise/prefer-catch'             : [ 'error' ],
+			'promise/spec-only'                : [ 'error' ],
+			'promise/valid-params'             : [ 'error' ],
 		},
 	},
 ] satisfies Linter.Config[];

@@ -5,22 +5,22 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		plugins : {
-			'jest' : jestPlugin,
+		plugins: {
+			'jest': jestPlugin,
 		},
 
-		files : patterns.jest,
+		files: patterns.jest,
 
-		rules : {
+		rules: {
 			...jestPlugin.configs['flat/recommended'].rules,
 
-			'i18next/no-literal-string' : [ 'off' ],
-			'n/no-unpublished-import'   : [ 'off' ],
+			'i18next/no-literal-string': [ 'off' ],
+			'n/no-unpublished-import'  : [ 'off' ],
 
-			'jest/no-standalone-expect' : [ 'error' ],
-			'jest/prefer-jest-mocked'   : [ 'error' ],
-			'jest/valid-title'          : [ 'error', {
-				ignoreTypeOfDescribeName : true,
+			'jest/no-standalone-expect': [ 'error' ],
+			'jest/prefer-jest-mocked'  : [ 'error' ],
+			'jest/valid-title'         : [ 'error', {
+				ignoreTypeOfDescribeName: true,
 			} ],
 		},
 	},

@@ -7,18 +7,18 @@ Base eslint config for all projects
 _This config is based on ESLint 9 flat config.
 To keep using legacy config, please consider installing `@anmiles/eslint-config@8.1.0`_
 
-## Presets
+## Configs
 
-| Preset | Code               |
+| Config | Code               |
 |--------|--------------------|
-| Base   | `...presets.base`  |
-| TS     | `...presets.ts`    |
-| React  | `...presets.react` |
-| Jest   | `...presets.jest`  |
+| Base   | `...configs.base`  |
+| TS     | `...configs.ts`    |
+| React  | `...configs.react` |
+| Jest   | `...configs.jest`  |
 
-For JS-only projects (without TS, Jest, React) use base preset.
-For more complex projects use combination of presets.
-__Note that `base` preset is mandatory in all cases.__
+For JS-only projects (without TS, Jest, React) use base config.
+For more complex projects use combination of configs.
+__Note that `base` config is mandatory in all cases.__
 
 ## Installation
 
@@ -46,39 +46,39 @@ __Note that `base` preset is mandatory in all cases.__
 
 ## Usage
 
-1. Extend all needed presets in your `./eslint.config.mjs` (or `./eslint.config.js` for ESM projects)
-	- For JS-only projects (without TS, React, Jest) use base preset:
+1. Extend all needed configs in your `./eslint.config.mjs` (or `./eslint.config.js` for ESM projects)
+	- For JS-only projects (without TS, React, Jest) use base config:
 		```js
-		import { presets } from '@anmiles/eslint-config';
+		import { configs } from '@anmiles/eslint-config';
 
 		export default [
-			...presets.base,
+			...configs.base,
 
 			/* your own config */
 		];
 		```
-	- For more complex projects use combination of presets
+	- For more complex projects use combination of configs
 		- Backend TS project with Jest:
 			```js
-			import { presets } from '@anmiles/eslint-config';
+			import { configs } from '@anmiles/eslint-config';
 
 			export default [
-				...presets.base,
-				...presets.ts,
-				...presets.jest,
+				...configs.base,
+				...configs.ts,
+				...configs.jest,
 
 				/* your own config */
 			];
 			```
 		- Frontend TS project with React and Jest:
 			```js
-			import { presets } from '@anmiles/eslint-config';
+			import { configs } from '@anmiles/eslint-config';
 
 			export default [
-				...presets.base,
-				...presets.ts,
-				...presets.jest,
-				...presets.react,
+				...configs.base,
+				...configs.ts,
+				...configs.jest,
+				...configs.react,
 
 				/* your own config */
 			];
@@ -86,13 +86,13 @@ __Note that `base` preset is mandatory in all cases.__
 	- Also you can use type-checked config - `./eslint.config.mts` (or `./eslint.config.ts` for ESM projects). This requires `jiti` ([why?](https://eslint.org/blog/2024/08/eslint-v9.9.0-released/))
 		```ts
 		import type { Linter } from 'eslint';
-		import { presets } from '@anmiles/eslint-config';
+		import { configs } from '@anmiles/eslint-config';
 
 		export default [
-				...presets.base,
-				...presets.ts,
-				...presets.jest,
-				...presets.react,
+				...configs.base,
+				...configs.ts,
+				...configs.jest,
+				...configs.react,
 
 			/* your own config */
 
@@ -113,12 +113,12 @@ __Note that `base` preset is mandatory in all cases.__
 Javascript:
 ```js
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
-import { patterns, presets } from '@anmiles/eslint-config';
+import { patterns, configs } from '@anmiles/eslint-config';
 
 export default [
-	...presets.base,
-	...presets.ts,
-	...presets.jest,
+	...configs.base,
+	...configs.ts,
+	...configs.jest,
 
 	{
 		ignores : [
@@ -162,12 +162,12 @@ Typescript:
 ```ts
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
 import type { Linter } from 'eslint';
-import { patterns, presets } from '@anmiles/eslint-config';
+import { patterns, configs } from '@anmiles/eslint-config';
 
 export default [
-	...presets.base,
-	...presets.ts,
-	...presets.jest,
+	...configs.base,
+	...configs.ts,
+	...configs.jest,
 
 	{
 		ignores : [
@@ -212,7 +212,7 @@ export default [
 Patterns and extensions are also exported.
 
 ```js
-import { patterns, presets } from '@anmiles/eslint-config';
+import { patterns, configs } from '@anmiles/eslint-config';
 
 console.log(extensions.base); // [ '.js', '.mjs', '.cjs', '.jsx', '.ts', '.cts', '.mts', '.tsx' ]
 console.log(extensions.jest); // [ '.test.js', '.test.mjs', '.test.cjs', '.test.jsx', '.test.ts', '.test.cts', '.test.mts', '.test.tsx' ]
@@ -221,10 +221,10 @@ console.log(patterns.react);  // [ '**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'
 ```
 
 ## Notes
-- `package-lock.json` doesn't have to be ignored. It's already ignored in configuration for `json` plugin inside `base` preset.
+- `package-lock.json` doesn't have to be ignored. It's already ignored in configuration for `json` plugin inside `base` config.
 - `node_modules` doesn't have to be ignored. It's implicitly ignored by ESLint.
 - Remember to provide `files` option in override sections to specify a set of extensions for which the section applies.
-  - There are some patterns to use ([see above](#exported-constants))
+	- There are some patterns to use ([see above](#exported-constants))
 - Don't keep `.eslintignore` file when using Flat Config. Use `ignores` config key instead (see the example above).
 
 ## Migration to ESLint V9 flat configuration
@@ -245,6 +245,8 @@ Version 9 is based on ESLint V9 flat configuration. See [migration guide](MIGRAT
 - [Releases · @stylistic/eslint-plugin](https://github.com/eslint-stylistic/eslint-stylistic/releases)
 
 - [Releases · @typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/releases)
+
+- [Releases · cspell](https://github.com/streetsidesoftware/cspell/releases)
 
 - [Releases · eslint-plugin-align-assignments](https://github.com/lucasefe/eslint-plugin-align-assignments/releases)
 

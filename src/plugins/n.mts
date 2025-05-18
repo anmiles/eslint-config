@@ -5,20 +5,20 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		plugins : {
-			'n' : nodePlugin,
+		plugins: {
+			'n': nodePlugin,
 		},
 
-		files : patterns.base,
+		files: patterns.base,
 
-		rules : {
+		rules: {
 			...nodePlugin.configs['flat/recommended'].rules,
 
-			'n/no-extraneous-import' : [ 'error', {
-				allowModules : [ 'globals' ],
+			'n/no-extraneous-import': [ 'error', {
+				allowModules: [ 'globals' ],
 			} ],
-			'n/no-path-concat'  : [ 'error' ],
-			'n/no-process-exit' : [ 'off' ],
+			'n/no-path-concat' : [ 'error' ],
+			'n/no-process-exit': [ 'off' ],
 		},
 	},
 ] satisfies Linter.Config[];

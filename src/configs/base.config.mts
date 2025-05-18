@@ -24,19 +24,19 @@ export default [
 	...jsonPlugin,
 
 	{
-		files : patterns.base,
+		files: patterns.base,
 
-		languageOptions : {
-			ecmaVersion : 2022,
-			sourceType  : 'module',
-			globals     : {
+		languageOptions: {
+			ecmaVersion: 2022,
+			sourceType : 'module',
+			globals    : {
 				...globals.es2021,
 				...globals.node,
 			},
 		},
 
-		linterOptions : {
-			reportUnusedDisableDirectives : 'warn',
+		linterOptions: {
+			reportUnusedDisableDirectives: 'warn',
 		},
 	},
 ] as Linter.Config[];

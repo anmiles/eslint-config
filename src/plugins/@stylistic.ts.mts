@@ -5,17 +5,17 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		plugins : {
-			'@stylistic' : stylisticEslintPlugin as ESLint.Plugin,
+		plugins: {
+			'@stylistic': stylisticEslintPlugin as ESLint.Plugin,
 		},
 
-		files : patterns.ts,
+		files: patterns.ts,
 
-		rules : {
-			'@stylistic/member-delimiter-style'  : [ 'error' ],
-			'@stylistic/type-annotation-spacing' : [ 'error', {
-				before : true,
-				after  : true,
+		rules: {
+			'@stylistic/member-delimiter-style' : [ 'error' ],
+			'@stylistic/type-annotation-spacing': [ 'error', {
+				before: false,
+				after : true,
 			} ],
 		},
 	},

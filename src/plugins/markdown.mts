@@ -7,17 +7,17 @@ declare module '@eslint/core' {
 
 export default [
 	{
-		plugins : {
-			'markdown' : markdownPlugin,
+		plugins: {
+			'markdown': markdownPlugin,
 		},
 
-		files : [
+		files: [
 			'**/*.md',
 		],
 
-		language : 'markdown/commonmark',
+		language: 'markdown/commonmark',
 
-		rules : {
+		rules: {
 			...(markdownPlugin.configs?.['recommended'] as Linter.Config[])?.[0]?.rules, // eslint-disable-line @typescript-eslint/dot-notation
 		},
 	},

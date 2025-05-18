@@ -18,28 +18,28 @@ export default [
 	...reactRefreshPlugin,
 
 	{
-		files : patterns.react,
+		files: patterns.react,
 
-		languageOptions : {
-			ecmaVersion : 2022,
-			sourceType  : 'module',
-			globals     : {
+		languageOptions: {
+			ecmaVersion: 2022,
+			sourceType : 'module',
+			globals    : {
 				...globals.es2021,
 				...globals.browser,
 			},
-			parserOptions : {
-				ecmaFeatures : {
-					jsx : true,
+			parserOptions: {
+				ecmaFeatures: {
+					jsx: true,
 				},
 			},
 		},
 
-		linterOptions : {
-			reportUnusedDisableDirectives : 'warn',
+		linterOptions: {
+			reportUnusedDisableDirectives: 'warn',
 		},
 
-		rules : {
-			'n/no-unsupported-features/node-builtins' : [ 'off' ],
+		rules: {
+			'n/no-unsupported-features/node-builtins': [ 'off' ],
 		},
 	},
 ] as Linter.Config[];

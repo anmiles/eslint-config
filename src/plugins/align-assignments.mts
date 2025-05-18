@@ -7,14 +7,14 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		plugins : {
-			'align-assignments' : fixupPluginRules(alignAssignmentsPlugin as ESLint.Plugin),
+		plugins: {
+			'align-assignments': fixupPluginRules(alignAssignmentsPlugin as ESLint.Plugin),
 		},
 
-		files : patterns.base,
+		files: patterns.base,
 
-		rules : {
-			'align-assignments/align-assignments' : [ 'error' ],
+		rules: {
+			'align-assignments/align-assignments': [ 'error' ],
 		},
 	},
 ] satisfies Linter.Config[];

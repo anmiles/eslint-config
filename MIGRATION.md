@@ -1,17 +1,5 @@
 # Migration to ESLint V9 flat configuration
 
-## TODO: https://eslint.org/blog/2025/02/eslint-css-support/
-## TODO: check all JS-repositories for having CSS files and add @eslint/css dependency
-## TODO: enhance logger: output date (or is it output now)?
-## TODO: gitservice scan: detect order.repositories file and try to sort as specified there; then reorder current repositories once
-## TODO: for every end-project run npm commands (youtube-likes-downloader is last done)
-## TODO: #last replace `../eslint-config` with `@anmiles/eslint-config` everywhere
-## TODO: #last replace `../` paths to locally installed packages in all end projects
-## TODO: #last run `npmc`
-## TODO: #last re-run `npm install` each package (with @latest) to properly replace installed packages
-## TODO: #last run `npms` to perform all checks
-## TODO: #last run `ncu` to check outdated dependencies
-
 ## Dependencies
 
 _Please strictly follow the install sequence below in order to avoid errors about peer dependencies_

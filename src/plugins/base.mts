@@ -5,39 +5,39 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		files : patterns.base,
+		files: patterns.base,
 
-		rules : {
+		rules: {
 			...eslintPlugin.configs.recommended.rules,
 
-			'arrow-body-style' : [ 'error' ],
-			'camelcase'        : [ 'error' ],
-			'complexity'       : [ 'error' ],
-			'curly'            : [ 'error' ],
-			'func-style'       : [ 'error', 'declaration', {
-				allowArrowFunctions : true,
+			'arrow-body-style': [ 'error' ],
+			'camelcase'       : [ 'error' ],
+			'complexity'      : [ 'error' ],
+			'curly'           : [ 'error' ],
+			'func-style'      : [ 'error', 'declaration', {
+				allowArrowFunctions: true,
 			} ],
-			'max-params' : [ 'error', {
-				max : 5,
+			'max-params': [ 'error', {
+				max: 5,
 			} ],
-			'no-console'            : [ 'error' ],
-			'no-eval'               : [ 'error' ],
-			'no-extra-bind'         : [ 'error' ],
-			'no-implied-eval'       : [ 'error' ],
-			'no-loop-func'          : [ 'error' ],
-			'no-useless-assignment' : [ 'error' ],
-			'no-useless-rename'     : [ 'error' ],
-			'no-unused-vars'        : [ 'error', {
-				varsIgnorePattern         : '^_',
-				caughtErrorsIgnorePattern : '^_',
+			'no-console'           : [ 'error' ],
+			'no-eval'              : [ 'error' ],
+			'no-extra-bind'        : [ 'error' ],
+			'no-implied-eval'      : [ 'error' ],
+			'no-loop-func'         : [ 'error' ],
+			'no-useless-assignment': [ 'error' ],
+			'no-useless-rename'    : [ 'error' ],
+			'no-unused-vars'       : [ 'error', {
+				varsIgnorePattern        : '^_',
+				caughtErrorsIgnorePattern: '^_',
 			} ],
-			'no-var'                  : [ 'error' ],
-			'object-shorthand'        : [ 'error' ],
-			'prefer-const'            : [ 'error' ],
-			'prefer-numeric-literals' : [ 'error' ],
-			'prefer-template'         : [ 'error' ],
-			'no-useless-constructor'  : [ 'error' ],
-			'yoda'                    : [ 'error' ],
+			'no-var'                 : [ 'error' ],
+			'object-shorthand'       : [ 'error' ],
+			'prefer-const'           : [ 'error' ],
+			'prefer-numeric-literals': [ 'error' ],
+			'prefer-template'        : [ 'error' ],
+			'no-useless-constructor' : [ 'error' ],
+			'yoda'                   : [ 'error' ],
 		},
 	},
 ] satisfies Linter.Config[];

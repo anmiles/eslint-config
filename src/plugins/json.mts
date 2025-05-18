@@ -3,35 +3,33 @@ import type { Linter } from 'eslint';
 
 export default [
 	{
-		plugins : {
-			'json' : jsonPlugin,
+		plugins: {
+			'json': jsonPlugin,
 		},
 
-		files : [
+		files: [
 			'**/*.json',
 		],
 
-		ignores : [
+		ignores: [
 			'**/package-lock.json',
 		],
 
-		language : 'json/jsonc',
+		language: 'json/jsonc',
 
-		rules : {
+		rules: {
 			...jsonPlugin.configs.recommended.rules,
-
-			'no-irregular-whitespace' : 'off',
 		},
 	},
 
 	{
-		files : [
+		files: [
 			'**/tsconfig.json',
 			'**/tsconfig.*.json',
 		],
 
-		languageOptions : {
-			allowTrailingCommas : true,
+		languageOptions: {
+			allowTrailingCommas: true,
 		} as Linter.Config['languageOptions'],
 	},
 ] satisfies Linter.Config[];

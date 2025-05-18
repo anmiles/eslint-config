@@ -5,18 +5,18 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		plugins : {
-			'react-refresh' : reactRefreshPlugin,
+		plugins: {
+			'react-refresh': reactRefreshPlugin,
 		},
 
-		files : patterns.react,
+		files: patterns.react,
 
-		rules : {
+		rules: {
 			...reactRefreshPlugin.configs.recommended.rules,
 
-			'react-refresh/only-export-components' : [ 'error', {
-				allowConstantExport : true,
-				customHOCs          : [ 'observer' ],
+			'react-refresh/only-export-components': [ 'error', {
+				allowConstantExport: true,
+				customHOCs         : [ 'observer' ],
 			} ],
 		},
 	},

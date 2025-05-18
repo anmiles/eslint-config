@@ -7,13 +7,13 @@ import { patterns } from '../lib/constants.mjs';
 
 export default [
 	{
-		plugins : {
-			'react-redux' : fixupPluginRules(reactReduxPlugin as ESLint.Plugin),
+		plugins: {
+			'react-redux': fixupPluginRules(reactReduxPlugin as ESLint.Plugin),
 		},
 
-		files : patterns.react,
+		files: patterns.react,
 
-		rules : {
+		rules: {
 			...reactReduxPlugin.configs.recommended.rules as Linter.Config['rules'],
 		},
 	},
