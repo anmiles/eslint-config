@@ -5,8 +5,96 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.1.0](../../tags/v8.1.0) - 2024-12-26
+## [9.0.0](../../tags/v9.0.0) - 2025-05-18
+__(BREAKING) Version 9 is based on ESLint V9 flat configuration. See [migration guide](MIGRATION.md) for details.__
+
+__(BREAKING) Dropped support for NodeJS 18 (EOL). Minimum required version is now NodeJS 20.__
+
 ### Added
+- Plugins and rules for them:
+	- `@eslint/css`
+	- `@eslint/json`
+	- `@eslint/markdown`
+	- `eslint-plugin-i18next`
+- Added new rules:
+	- `@stylistic/type-annotation-spacing`
+	- `@stylistic/type-generic-spacing`
+	- `@typescript-eslint/no-unsafe-type-assertion`
+	- `no-useless-assignment`
+	- `no-useless-constructor`
+	- `jest/prefer-jest-mocked`
+	- `promise/prefer-catch`
+	- `promise/spec-only`
+	- `react/jsx-props-no-spread-multi`
+- Enabled rules:
+	- `no-console`
+	- `no-irregular-whitespace` for react
+- Exported constants ([see details](README.md#exported-constants))
+	- `extensions`
+	- `patterns`
+
+### Changed
+- Migrated to NodeJS 20.19
+- Migrated to ESLint V9 flat configs
+- Updated dependencies
+- Migrated from `eslint-plugin-json` plugin to `@eslint/json` plugin
+- Updated existing rules:
+	- `@stylistic/indent`
+		- added option `offsetTernaryExpressions : true`
+		- added option `offsetTernaryExpressionsOffsetCallExpressions : true`
+	- `@stylistic/key-spacing`
+		- changed option `beforeColon` to `false`
+		- added option `ignoredNodes: [ 'TSInterfaceBody', 'TSTypeLiteral', 'ClassBody' ]`
+	- `@stylistic/max-len`
+		- removed option `ignoreStrings : true`
+		- added option `ignoreComments : true`
+		- added option `ignoreRegExpLiterals : true`
+		- added option `ignoreTemplateLiterals : true`
+	- `@stylistic/no-extra-parens`
+		- added option `nestedConditionalExpressions : false`
+	- `@stylistic/object-property-newline`
+		- renamed option `allowMultiplePropertiesPerLine` to `allowAllPropertiesOnSameLine`
+	- `@stylistic/quotes`
+		- added option `allowTemplateLiterals : 'avoidEscape'`
+	- `@stylistic/generator-star-spacing`
+		- changed `neither` to `after`
+	- `@stylistic/type-annotation-spacing`
+		- changed option `before` to `false`
+	- `@typescript-eslint/explicit-module-boundary-types`
+		- added option `allowOverloadFunctions: true`
+	- `@typescript-eslint/no-unused-vars`
+		- added option `caughtErrorsIgnorePattern : '^_'`
+	- `no-unused-vars`
+		- added option `caughtErrorsIgnorePattern : '^_'`
+	- `import/extensions`
+		- adapted options for new config
+	- `import/order`
+		- changed option `groups`: added `object`, moved `unknown` to the very end, removed `no-irregular-whitespace`
+		- added option `named : true`
+		- added option `alphabetize : { order : 'asc', caseInsensitive : true }`
+		- added option `'newlines-between' : 'always'`
+		- added option `warnOnUnassignedImports : true`
+	- `n/no-extraneous-import`
+		- enabled
+		- added option `allowModules`
+	- `react-refresh/only-export-components`
+		- added option `customHOCs`
+
+### Removed
+- Deleted rules that were previously disabled:
+	- `n/no-missing-require`
+	- `n/no-missing-import`
+- Deleted rules:
+	- `@stylistic/jsx-indent`
+- Disabled rules:
+	- `no-redeclare` for typescript
+	- `n/no-missing-import` for typescript
+	- `n/no-unpublished-import` for Vite config files
+	- `import/exports-last`
+	- `import/group-exports`
+
+## [8.1.0](../../tags/v8.1.0) - 2024-12-26
+### Changed
 - Update all dependencies to latest versions that still support ESLint V8 only
 
 ## [8.0.8](../../tags/v8.0.8) - 2024-04-19
@@ -78,8 +166,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Recommended rules for `import` plugin
 - Recommended rules for `@typescript-eslint` plugin
 - Plugins that are used to be installed with `npm init @eslint/config`:
-  - `n`
-  - `promise`
+	- `n`
+	- `promise`
 ### Changed
 - Migrate stylistic rules to `@stylistic` due to moving formatting rules out of ESLint (see https://eslint.style/guide/why)
 - Split into presets to support different combinations of configs.
