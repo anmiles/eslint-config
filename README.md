@@ -24,7 +24,7 @@ __Note that `base` config is mandatory in all cases.__
 
 1. Install this package
 	```bash
-	npm install --save-dev ../eslint-config
+	npm install --save-dev @anmiles/eslint-config
 	```
 1. Install required devDependencies
 	- Base dependencies for all files:
