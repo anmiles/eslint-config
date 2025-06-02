@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.0.1](../../tags/v9.0.1) - 2025-06-03
+### Changed
+- Fixed typo in README.md
+
 ## [9.0.0](../../tags/v9.0.0) - 2025-05-18
 __(BREAKING) Version 9 is based on ESLint V9 flat configuration. See [migration guide](MIGRATION.md) for details.__
 
