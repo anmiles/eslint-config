@@ -6,7 +6,7 @@ _Please strictly follow the install sequence below in order to avoid errors abou
 
 1. Uninstall outdated dependencies
 	```bash
-	npm uninstall @anmiles/eslint-config @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-import-resolver-typescript eslint-plugin-align-assignments eslint-plugin-import eslint-plugin-jest eslint-plugin-jsonc eslint-plugin-n eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh
+	npm uninstall @anmiles/eslint-config @eslint/compat @eslint/css @eslint/js @eslint/json @eslint/markdown @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-import-resolver-typescript eslint-plugin-align-assignments eslint-plugin-i18next eslint-plugin-import eslint-plugin-jest eslint-plugin-jsonc eslint-plugin-n eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-redux eslint-plugin-react-refresh
 	```
 1. Install this package and required devDependencies
 	- see [README.md](README.md#installation)
