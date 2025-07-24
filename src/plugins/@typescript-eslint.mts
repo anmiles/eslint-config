@@ -18,7 +18,6 @@ export default [
 			'max-params'           : [ 'off' ],
 			'no-loop-func'         : [ 'off' ],
 			'no-redeclare'         : [ 'off' ],
-			'no-shadow'            : [ 'off' ],
 			'no-unused-expressions': [ 'off' ],
 			'no-unused-vars'       : [ 'off' ],
 			'require-await'        : [ 'off' ],

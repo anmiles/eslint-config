@@ -1,5 +1,4 @@
 import type { ESLint, Linter } from 'eslint';
-// @ts-expect-error 7016 plugin is non-typed
 import importPlugin from 'eslint-plugin-import';
 
 import { extensions, patterns } from '../lib/constants.mjs';

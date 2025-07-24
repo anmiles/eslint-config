@@ -246,8 +246,6 @@ Version 9 is based on ESLint V9 flat configuration. See [migration guide](MIGRAT
 
 - [Releases · @typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/releases)
 
-- [Releases · cspell](https://github.com/streetsidesoftware/cspell/releases)
-
 - [Releases · eslint-plugin-align-assignments](https://github.com/lucasefe/eslint-plugin-align-assignments/releases)
 
 - [Releases · eslint-plugin-i18next](https://github.com/edvardchen/eslint-plugin-i18next/blob/main/CHANGELOG.md)

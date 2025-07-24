@@ -25,7 +25,7 @@ export default [
 			'@stylistic/computed-property-spacing': [ 'error', 'never' ],
 			'@stylistic/dot-location'             : [ 'error', 'property' ],
 			'@stylistic/eol-last'                 : [ 'error' ],
-			'@stylistic/func-call-spacing'        : [ 'error' ],
+			'@stylistic/function-call-spacing'    : [ 'error' ],
 			'@stylistic/generator-star-spacing'   : [ 'error', 'after' ],
 			'@stylistic/indent'                   : [ 'error', 'tab', {
 				SwitchCase                                   : 1,
