@@ -83,8 +83,26 @@ export default [
 			'@stylistic/object-property-newline'         : [ 'error', {
 				allowAllPropertiesOnSameLine: true,
 			} ],
-			'@stylistic/operator-linebreak': [ 'error', 'before' ],
-			'@stylistic/quotes'            : [ 'error', 'single', {
+			'@stylistic/operator-linebreak': [ 'error', 'before', {
+				'overrides': {
+					'='  : 'ignore',
+					'+=' : 'ignore',
+					'-=' : 'ignore',
+					'*=' : 'ignore',
+					'/=' : 'ignore',
+					'%=' : 'ignore',
+					'**=': 'ignore',
+					'&=' : 'ignore',
+					'|=' : 'ignore',
+					'^=' : 'ignore',
+					'<<=': 'ignore',
+					'>>=': 'ignore',
+					'&&=': 'ignore',
+					'||=': 'ignore',
+					'??=': 'ignore',
+				},
+			} ],
+			'@stylistic/quotes': [ 'error', 'single', {
 				avoidEscape          : true,
 				allowTemplateLiterals: 'avoidEscape',
 			} ],
