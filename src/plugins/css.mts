@@ -15,7 +15,7 @@ export default [
 
 		rules: {
 			...cssPlugin.configs.recommended.rules,
-			'css/no-invalid-properties': [ 'error', { allowUnknownVariables: false } ],
+			'css/no-invalid-properties': [ 'error', { allowUnknownVariables: true } ],
 		},
 	},
 ] satisfies Linter.Config[];
