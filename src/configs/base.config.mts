@@ -10,6 +10,7 @@ import importPlugin from '../plugins/import.mjs';
 import jsonPlugin from '../plugins/json.mjs';
 import markdownPlugin from '../plugins/markdown.mjs';
 import nPlugin from '../plugins/n.mjs';
+import perfectionistPlugin from '../plugins/perfectionist.mjs';
 import promisePlugin from '../plugins/promise.mjs';
 
 export default [
@@ -20,6 +21,7 @@ export default [
 	...importPlugin,
 	...markdownPlugin,
 	...nPlugin,
+	...perfectionistPlugin,
 	...promisePlugin,
 	...jsonPlugin,
 

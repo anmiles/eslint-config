@@ -4,7 +4,7 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'react-hooks': fixupPluginRules(reactHooksPlugin as ESLint.Plugin),
@@ -19,4 +19,6 @@ export default [
 			'react-hooks/exhaustive-deps': [ 'error' ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

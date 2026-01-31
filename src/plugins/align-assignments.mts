@@ -5,7 +5,7 @@ import alignAssignmentsPlugin from 'eslint-plugin-align-assignments';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'align-assignments': fixupPluginRules(alignAssignmentsPlugin as ESLint.Plugin),
@@ -17,4 +17,6 @@ export default [
 			'align-assignments/align-assignments': [ 'error' ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

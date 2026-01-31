@@ -3,7 +3,7 @@ import reactPlugin from 'eslint-plugin-react';
 
 import { extensions, patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'react': reactPlugin,
@@ -87,4 +87,6 @@ export default [
 			'n/no-unpublished-import': [ 'off' ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

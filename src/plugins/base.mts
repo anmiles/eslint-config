@@ -3,7 +3,7 @@ import type { Linter } from 'eslint';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		files: patterns.base,
 
@@ -36,8 +36,11 @@ export default [
 			'prefer-const'           : [ 'error' ],
 			'prefer-numeric-literals': [ 'error' ],
 			'prefer-template'        : [ 'error' ],
+			'preserve-caught-error'  : [ 'error' ],
 			'no-useless-constructor' : [ 'error' ],
 			'yoda'                   : [ 'error' ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

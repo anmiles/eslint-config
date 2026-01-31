@@ -3,7 +3,7 @@ import i18NextPlugin from 'eslint-plugin-i18next';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'i18next': i18NextPlugin,
@@ -20,4 +20,6 @@ export default [
 			} ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

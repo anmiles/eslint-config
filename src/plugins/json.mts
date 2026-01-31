@@ -1,10 +1,12 @@
 import jsonPlugin from '@eslint/json';
 import type { Linter } from 'eslint';
 
-export default [
+type Plugin = Linter.Config['plugins'] extends Record<string, infer Plugin> ? Plugin : never;
+
+const config: Linter.Config[] = [
 	{
 		plugins: {
-			'json': jsonPlugin,
+			'json': jsonPlugin as Plugin,
 		},
 
 		files: [
@@ -32,4 +34,6 @@ export default [
 			allowTrailingCommas: true,
 		} as Linter.Config['languageOptions'],
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

@@ -5,7 +5,7 @@ declare module '@eslint/core' {
 	export type SyntaxElement = unknown;
 }
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'markdown': markdownPlugin,
@@ -21,4 +21,6 @@ export default [
 			...(markdownPlugin.configs?.['recommended'] as Linter.Config[])?.[0]?.rules, // eslint-disable-line @typescript-eslint/dot-notation
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

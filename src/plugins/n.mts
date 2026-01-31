@@ -3,7 +3,7 @@ import nodePlugin from 'eslint-plugin-n';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'n': nodePlugin,
@@ -21,4 +21,6 @@ export default [
 			'n/no-process-exit': [ 'off' ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

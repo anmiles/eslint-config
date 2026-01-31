@@ -3,7 +3,7 @@ import type { ESLint, Linter } from 'eslint';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'@stylistic': stylisticEslintPlugin as ESLint.Plugin,
@@ -28,9 +28,8 @@ export default [
 			'@stylistic/function-call-spacing'    : [ 'error' ],
 			'@stylistic/generator-star-spacing'   : [ 'error', 'after' ],
 			'@stylistic/indent'                   : [ 'error', 'tab', {
-				SwitchCase                                   : 1,
-				offsetTernaryExpressions                     : true,
-				offsetTernaryExpressionsOffsetCallExpressions: true,
+				SwitchCase              : 1,
+				offsetTernaryExpressions: true,
 			} ],
 			'@stylistic/key-spacing': [ 'error', {
 				beforeColon : false,
@@ -64,8 +63,10 @@ export default [
 			'@stylistic/multiline-ternary': [ 'error', 'always-multiline' ],
 			'@stylistic/new-parens'       : [ 'error' ],
 			'@stylistic/no-extra-parens'  : [ 'error', 'all', {
-				ignoreJSX                   : 'multi-line',
-				enforceForArrowConditionals : false,
+				ignoreJSX   : 'multi-line',
+				ignoredNodes: [
+					'ArrowFunctionExpression[body.type=ConditionalExpression]',
+				],
 				nestedConditionalExpressions: false,
 			} ],
 			'@stylistic/no-extra-semi'           : [ 'error' ],
@@ -79,8 +80,10 @@ export default [
 			'@stylistic/no-trailing-spaces'              : [ 'error' ],
 			'@stylistic/no-whitespace-before-property'   : [ 'error' ],
 			'@stylistic/nonblock-statement-body-position': [ 'error' ],
-			'@stylistic/object-curly-spacing'            : [ 'error', 'always' ],
-			'@stylistic/object-property-newline'         : [ 'error', {
+			'@stylistic/object-curly-spacing'            : [ 'error', 'always', {
+				emptyObjects: 'never',
+			} ],
+			'@stylistic/object-property-newline': [ 'error', {
 				allowAllPropertiesOnSameLine: true,
 			} ],
 			'@stylistic/operator-linebreak': [ 'error', 'before', {
@@ -124,4 +127,6 @@ export default [
 			'@stylistic/yield-star-spacing'    : [ 'error', 'after' ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

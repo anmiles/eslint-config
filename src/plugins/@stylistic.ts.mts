@@ -3,7 +3,7 @@ import type { ESLint, Linter } from 'eslint';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'@stylistic': stylisticEslintPlugin as ESLint.Plugin,
@@ -19,4 +19,6 @@ export default [
 			} ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

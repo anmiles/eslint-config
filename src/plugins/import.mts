@@ -3,7 +3,7 @@ import importPlugin from 'eslint-plugin-import';
 
 import { extensions, patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'import': importPlugin as ESLint.Plugin,
@@ -66,4 +66,6 @@ export default [
 			},
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

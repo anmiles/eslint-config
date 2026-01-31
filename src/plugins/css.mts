@@ -1,7 +1,7 @@
 import cssPlugin from '@eslint/css';
 import type { Linter } from 'eslint';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'css': cssPlugin,
@@ -18,4 +18,6 @@ export default [
 			'css/no-invalid-properties': [ 'error', { allowUnknownVariables: true } ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

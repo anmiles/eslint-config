@@ -5,7 +5,7 @@ import reactReduxPlugin from 'eslint-plugin-react-redux';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'react-redux': fixupPluginRules(reactReduxPlugin as ESLint.Plugin),
@@ -17,4 +17,6 @@ export default [
 			...reactReduxPlugin.configs.recommended.rules as Linter.Config['rules'],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

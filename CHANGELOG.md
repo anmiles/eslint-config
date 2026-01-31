@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [10.0.0](../../tags/v10.0.0) - 2026-01-31
+### Added
+- Plugins and rules for them:
+	- `eslint-plugin-perfectionist` plugin
+- Added new rules:
+	- `preserve-caught-error`
+	- `jest/no-unnecessary-assertion`
+	- `jest/no-unneeded-async-expect-function`
+	- `jest/prefer-jest-mocked`
+	- `jest/prefer-mock-return-shorthand`
+	- `jest/prefer-to-have-been-called`
+	- `jest/valid-expect-with-promise`
+	- `jest/valid-mock-module-path`
+
+### Changed
+- Updated existing rules:
+	- `@stylistic/indent`
+		- Removed deprecated `offsetTernaryExpressionsOffsetCallExpressions` option in favor of `offsetTernaryExpressions.CallExpression` (true by default)
+	- `@stylistic/no-extra-parens`
+		- Removed deprecated `enforceForArrowConditionals` option in favor of `ignoredNodes: [ 'ArrowFunctionExpression[body.type=ConditionalExpression]' ]`,
+	- `@stylistic/object-curly-spacing`
+		- Added option `emptyObjects: 'never'`
+
+### Removed
+- Removed deprecated rules:
+	- `@stylistic/jsx-sort-props` (in favor of `eslint-plugin-perfectionist/sort-jsx-props`)
+
 ## [9.1.1](../../tags/v9.1.1) - 2025-11-29
 ### Changed
 - Allow linebreaks after assignment operators

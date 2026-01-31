@@ -4,7 +4,7 @@ import promisePlugin from 'eslint-plugin-promise';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'promise': promisePlugin as ESLint.Plugin,
@@ -30,4 +30,6 @@ export default [
 			'promise/valid-params'             : [ 'error' ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

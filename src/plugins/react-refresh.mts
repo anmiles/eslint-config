@@ -3,7 +3,7 @@ import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'react-refresh': reactRefreshPlugin,
@@ -20,4 +20,6 @@ export default [
 			} ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;

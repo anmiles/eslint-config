@@ -3,7 +3,7 @@ import type { ESLint, Linter } from 'eslint';
 
 import { patterns } from '../lib/constants.mjs';
 
-export default [
+const config: Linter.Config[] = [
 	{
 		plugins: {
 			'@stylistic': stylisticEslintPlugin as ESLint.Plugin,
@@ -40,14 +40,6 @@ export default [
 				component: true,
 				html     : false,
 			} ],
-			'@stylistic/jsx-sort-props': [ 'error', {
-				ignoreCase          : true,
-				callbacksLast       : true,
-				shorthandLast       : true,
-				multiline           : 'last',
-				noSortAlphabetically: true,
-				reservedFirst       : true,
-			} ],
 			'@stylistic/jsx-tag-spacing': [ 'error', {
 				beforeClosing: 'never',
 			} ],
@@ -63,4 +55,6 @@ export default [
 			} ],
 		},
 	},
-] satisfies Linter.Config[];
+];
+
+export default config;
