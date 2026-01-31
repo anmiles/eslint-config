@@ -14,8 +14,11 @@ const config: Linter.Config[] = [
 		rules: {
 			'@stylistic/member-delimiter-style' : [ 'error' ],
 			'@stylistic/type-annotation-spacing': [ 'error', {
-				before: false,
-				after : true,
+				before   : false,
+				after    : true,
+				overrides: {
+					arrow: 'ignore',
+				},
 			} ],
 		},
 	},
