@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [10.0.2](../../tags/v10.0.2) - 2026-02-01
+### Changed
+- Fix `perfectionist/sort-jsx-props` rule
+
+### Removed
+- Removed deprecated `@stylistic/jsx-props-no-multi-spaces` rule in favor of `@stylistic/no-multi-spaces`
+
 ## [10.0.1](../../tags/v10.0.1) - 2026-01-31
 ### Changed
 - Fix conflicting arrow-related rules

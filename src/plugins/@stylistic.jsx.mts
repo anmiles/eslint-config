@@ -33,10 +33,9 @@ const config: Linter.Config[] = [
 			'@stylistic/jsx-one-expression-per-line': [ 'error', {
 				allow: 'non-jsx',
 			} ],
-			'@stylistic/jsx-pascal-case'          : [ 'error' ],
-			'@stylistic/jsx-props-no-multi-spaces': [ 'error' ],
-			'@stylistic/jsx-quotes'               : [ 'error', 'prefer-double' ],
-			'@stylistic/jsx-self-closing-comp'    : [ 'error', {
+			'@stylistic/jsx-pascal-case'      : [ 'error' ],
+			'@stylistic/jsx-quotes'           : [ 'error', 'prefer-double' ],
+			'@stylistic/jsx-self-closing-comp': [ 'error', {
 				component: true,
 				html     : false,
 			} ],

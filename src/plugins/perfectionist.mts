@@ -1,5 +1,5 @@
 import type { Linter } from 'eslint';
-import * as perfectionistPlugin from 'eslint-plugin-perfectionist';
+import perfectionistPlugin from 'eslint-plugin-perfectionist';
 
 import { patterns } from '../lib/constants.mjs';
 
@@ -15,17 +15,19 @@ const config: Linter.Config[] = [
 			'perfectionist/sort-jsx-props': [
 				'error',
 				{
-					type      : 'natural',
+					type      : 'unsorted',
 					order     : 'asc',
 					ignoreCase: true,
-
-					groups: [
-						'reserved',
-						'callback',
-						'shorthand',
-						'multiline',
+					groups    : [
 						'unknown',
+						'shorthand-prop',
+						'multiline-prop',
+						'callback',
 					],
+					customGroups: [ {
+						groupName         : 'callback',
+						elementNamePattern: '^(on|handle)[A-Z]',
+					} ],
 				},
 			],
 		},

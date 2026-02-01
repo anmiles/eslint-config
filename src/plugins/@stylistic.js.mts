@@ -77,6 +77,12 @@ const config: Linter.Config[] = [
 				maxEOF: 1,
 				maxBOF: 0,
 			} ],
+			'@stylistic/no-multi-spaces': [ 'error', {
+				exceptions: {
+					Property          : true,
+					VariableDeclarator: true,
+				},
+			} ],
 			'@stylistic/no-trailing-spaces'              : [ 'error' ],
 			'@stylistic/no-whitespace-before-property'   : [ 'error' ],
 			'@stylistic/nonblock-statement-body-position': [ 'error' ],
